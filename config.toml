@@ -1,0 +1,20 @@
+baseURL = "https://cmejo.github.io"
+title = "Christopher Mejo, PhD"
+theme = "hugo-profile"
+languageCode = "en-us"
+
+[params]
+  title = "Christopher Mejo, PhD"
+  subtitle = "AI Researcher | Data Scientist | Theoretical Physicist"
+  description = "Resume and research portfolio of Dr. Christopher Mejo."
+  favicon = "images/favicon.ico"
+
+  [params.profile]
+    name = "Christopher Mejo, PhD"
+    tagline = "AI Researcher | Data Scientist"
+    location = "New York, NY"
+    image = "images/profile.jpg"
+    email = "work@cmejo.com"
+    phone = "+1-917-747-8865"
+    linkedin = "https://www.linkedin.com/in/cmejo"
+

@@ -1,0 +1,15 @@
+- title: "Machine Learning"
+  items: ["Deep Learning", "NLP", "Graph Neural Networks", "Reinforcement Learning", "RAG"]
+
+- title: "Programming Languages"
+  items: ["Python", "R", "SQL", "C++", "JavaScript", "PHP"]
+
+- title: "Frameworks"
+  items: ["PyTorch", "TensorFlow", "Hugging Face", "MLflow", "Kubeflow"]
+
+- title: "Cloud & MLOps"
+  items: ["AWS", "GCP", "Kubernetes", "Docker", "Airflow"]
+
+- title: "Visualization"
+  items: ["Plotly", "Seaborn", "Tableau", "D3.js"]
+
