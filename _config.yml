@@ -20,6 +20,7 @@ resume_website:                 "https://cmejo.com"
 resume_github_url:              "https://github.com/cmejo"
 resume_linkedin_url:            "https://www.linkedin.com/in/cmejo/"
 resume_quote:                   "Bridging the gap between theoretical quantum computing and production-scale machine learning."
+resume_download_path:           "/assets/pdf/Christopher_Mejo_Resume.pdf"
 
 # Sections
 resume_section_experience:      true
