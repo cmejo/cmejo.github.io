@@ -1,0 +1,40 @@
+<header class="header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <img class="profile-image img-fluid float-start rounded-circle" src="assets/images/profile.png" alt="profile image" />
+                <div class="profile-content">
+                    <h1 class="name">{{ site.resume_name }}</h1>
+                    <h2 class="desc">{{ site.resume_title }}</h2>
+                    <ul class="social list-inline">
+                        {% if site.resume_github_url %}
+                        <li class="list-inline-item"><a href="{{ site.resume_github_url }}" target="_blank"><i class="fab fa-github-alt"></i></a></li>
+                        {% endif %}
+                        {% if site.resume_linkedin_url %}
+                        <li class="list-inline-item"><a href="{{ site.resume_linkedin_url }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        {% endif %}
+                         {% if site.resume_website %}
+                        <li class="list-inline-item"><a href="{{ site.resume_website }}" target="_blank"><i class="fas fa-globe"></i></a></li>
+                        {% endif %}
+                    </ul>
+                </div><!--//profile-content-->
+            </div>
+            <div class="col-12 col-md-auto">
+                <div class="contact-info">
+                    <ul class="list-unstyled">
+                        {% if site.resume_contact_email %}
+                        <li class="email"><i class="fas fa-envelope"></i><a href="mailto:{{ site.resume_contact_email }}">{{ site.resume_contact_email }}</a></li>
+                        {% endif %}
+                        {% if site.resume_contact_telephone %}
+                        <li class="phone"><i class="fas fa-phone"></i><a href="tel:{{ site.resume_contact_telephone }}">{{ site.resume_contact_telephone }}</a></li>
+                        {% endif %}
+                         {% if site.resume_website %}
+                        <li class="website"><i class="fas fa-globe"></i><a href="{{ site.resume_website }}" target="_blank">{{ site.resume_website }}</a></li>
+                         {% endif %}
+                    </ul>
+                </div><!--//contact-info-->
+                <a href="mailto:{{ site.resume_contact_email }}" class="btn btn-cta-primary float-end">Contact Me</a>
+            </div>
+        </div>
+    </div><!--//container-->
+</header><!--//header-->

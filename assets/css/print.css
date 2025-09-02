@@ -1,0 +1,13 @@
+
+/* Print stylesheet for CV page */
+@media print {
+  @page { margin: 20mm; size: A4; }
+  body { background: white; color: black; font-size:12pt; }
+  nav, .no-print, .btn { display: none !important; }
+  .container { max-width: 100%; padding: 0; }
+  .hero img { display: none; }
+  .card { border: none; box-shadow: none; padding: 0; }
+  h1 { font-size: 18pt; margin-bottom: 0.2rem; }
+  h2 { font-size: 13pt; margin-top: 0.8rem; }
+  ul { margin: 0 0 0.6rem 1.1rem; }
+}

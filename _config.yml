@@ -1,0 +1,59 @@
+# Site settings
+title: "Christopher Mejo, Ph.D. | AI Researcher & Theoretical Computer Scientist"
+description: "Online Résumé of Christopher Mejo, an AI Researcher and Theoretical Computer Scientist with expertise in Quantum Computing and Machine Learning."
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Resume settings
+resume_avatar:                  "true"
+resume_name:                    "Christopher Mejo, Ph.D."
+resume_title:                   "AI Researcher & Theoretical Computer Scientist"
+resume_contact_email:           "work@cmejo.com"
+resume_contact_telephone:       "(917) 747-8865"
+resume_contact_address:         "New York, NY 10027"
+resume_header_contact_info:     "New York, NY 10027 | work@cmejo.com"
+resume_website:                 "https://cmejo.com"
+resume_github_url:              "https://github.com/cmejo"
+resume_linkedin_url:            "https://www.linkedin.com/in/cmejo/"
+resume_quote:                   "Bridging the gap between theoretical quantum computing and production-scale machine learning."
+resume_download_path:           "/assets/pdf/Christopher_Mejo_Resume.pdf"
+
+# Sections
+resume_section_experience:      true
+resume_section_education:       true
+resume_section_projects:        true
+resume_section_skills:          true
+resume_section_recognition:     false
+resume_section_associations:    false
+resume_section_interests:       false
+
+# Theme settings
+# remote_theme: "sharu725/online-cv"
+theme: jekyll-theme-minimal # A default theme for GitHub Pages. You can change this.
+
+# For the online-cv theme, you often need to specify the theme like this
+# remote_theme: sharu725/online-cv
+
+# If you are using the theme as a gem, you would use:
+# theme: online-cv
+
+# GitHub Pages settings
+# Use this if you are deploying to user page like cmejo.github.io
+# url: "https://cmejo.github.io"
+# baseurl: ""
+
+# If deploying to a project page like cmejo.github.io/resume
+# url: "https://cmejo.github.io"
+# baseurl: "/resume"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
