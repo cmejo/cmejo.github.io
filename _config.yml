@@ -1,0 +1,29 @@
+
+title: "Christopher Mejo, Ph.D."
+description: "AI researcher & theoretical computer scientist bridging quantum computing and production ML."
+url: "https://cmejo.github.io"
+baseurl: ""
+
+author:
+  name: "Christopher Mejo"
+  email: "work@cmejo.com"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+
+collections:
+  publications:
+    output: true
+    permalink: /publications/:title/
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+defaults:
+  - scope: {path: "", type: "publications"}
+    values: {layout: post}
+  - scope: {path: "", type: "projects"}
+    values: {layout: post}
