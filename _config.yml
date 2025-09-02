@@ -43,8 +43,8 @@ theme: jekyll-theme-minimal # A default theme for GitHub Pages. You can change t
 
 # GitHub Pages settings
 # Use this if you are deploying to user page like cmejo.github.io
-# url: "https://cmejo.github.io"
-# baseurl: ""
+url: "https://cmejo.github.io"
+baseurl: ""
 
 # If deploying to a project page like cmejo.github.io/resume
 # url: "https://cmejo.github.io"
