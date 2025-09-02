@@ -1,1 +1,1 @@
-# Personal Home Page for Christopher Mejo using Hugo
+# Personal Home Page for Christopher Mejo using Jekyll
