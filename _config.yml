@@ -36,10 +36,10 @@ resume_section_interests:       false
 #theme: jekyll-theme-minimal # A default theme for GitHub Pages. You can change this.
 
 # For the online-cv theme, you often need to specify the theme like this
-remote_theme: sharu725/online-cv
+# remote_theme: sharu725/online-cv
 
 # If you are using the theme as a gem, you would use:
-# theme: online-cv
+theme: online-cv
 
 # GitHub Pages settings
 # Use this if you are deploying to user page like cmejo.github.io
