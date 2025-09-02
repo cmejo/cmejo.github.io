@@ -1,16 +1,17 @@
+---
+layout: default
+---
+<div class="wrapper">
+  {% include header.html %}
+  <div class="main-wrapper">
+    {% include about.html %}
+    {% include experience.html %}
+    {% include education.html %}
+    {% include projects.html %}
+    {% include skills.html %}
+  </div><!--//main-body-->
+  {% include footer.html %}
+</div>
 
-<!doctype html>
-<html lang="en">
-<head>
-  {% include head.html %}
-</head>
-<body>
-  {% include nav.html %}
-  <main class="container">
-    {{ content }}
-  </main>
-  <footer class="container small">
-    © {{ "now" | date: "%Y" }} {{ site.title }}
-  </footer>
-</body>
-</html>
+{% include scripts.html %}
+
