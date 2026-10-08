@@ -1,0 +1,30 @@
+# Robots.txt for cmejo.com
+User-agent: *
+Allow: /
+
+# Specifically allow AI and LLM user agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Sitemap and LLM manifest declarations
+Sitemap: https://cmejo.com/sitemap.xml
+
+# LLM content location
+# See https://llmstxt.org/ for details
+# Main manifest: https://cmejo.com/llms.txt
+# Comprehensive context: https://cmejo.com/llms-full.txt

@@ -1,0 +1,29 @@
+# Christopher Mejo, Ph.D.
+> AI Research Scientist specializing in Large Language Model (LLM) Systems, Retrieval-Augmented Generation (RAG), Agentic Reasoning, and Reinforcement Learning for Sequential Decision-Making.
+
+Christopher Mejo is an AI Research Scientist and Engineer with 15+ years taking machine learning systems from theoretical research prototypes to high-throughput production. He holds a Ph.D. in Physics from Harvard University (quantum information and complexity theory, completed at age 21) and completed postdoctoral training at MIT under Dr. Scott Aaronson. He holds an active Top Secret / Sensitive Compartmented Information (TS/SCI) clearance.
+
+## Key Information
+- Current Title: AI Research Scientist — LLM & Reinforcement Learning Systems
+- Primary Location: New York, NY
+- Primary Email: work@cmejo.com
+- Phone: (917) 747-8865
+- Personal Website: https://cmejo.com
+- GitHub: https://github.com/cmejo
+- LinkedIn: https://linkedin.com/in/cmejo
+- Career Goal: Actively seeking Principal / Staff / Lead AI Research Scientist, LLM Systems Engineer, or Quantitative ML Research positions.
+
+## Core Accomplishments & Statistics
+- Solo-architected AI Scholar (github.com/cmejo/AI_Scholar), an open-source hybrid RAG platform indexing 15M+ research papers (Google Summer of Code Fellow 2024 & 2025 with R Foundation).
+- Delivered 6.2 Sharpe ratio (Sortino 8.4, max drawdown <1.9%) over 24-month continuous live trading window executing billions in volume at Braverock LLC.
+- Built transformer market-prediction pipelines handling 1B+ quote data points per day at microsecond latency.
+- Directed distributed pretraining & fine-tuning of 7B-14B parameter foundation models with DeepSpeed ZeRO-3 and custom CUDA memory-mapped tokenizers (-38% wall-clock step latency).
+- Built CushionNLP (BERT transformer) driving 30% increase in bank-fee negotiation success and $2M+ annual savings.
+- Federated medical computer vision (EfficientNet-B7) achieving 0.972 ROC-AUC under differential privacy (ε=1.2, δ=10^-5) across 4 healthcare institutions.
+- Active Top Secret / Sensitive Compartmented Information (TS/SCI) security clearance.
+
+## Machine-Readable Resources
+- Full Resume (Markdown): https://cmejo.com/resume.md
+- Full Resume (JSON Resume): https://cmejo.com/resume.json
+- Full Context for LLMs: https://cmejo.com/llms-full.txt
+- Main Web Portfolio: https://cmejo.com/
