@@ -11,7 +11,7 @@ Christopher Mejo is an AI Research Scientist and Engineer with 15+ years taking 
 - Personal Website: https://cmejo.com
 - GitHub: https://github.com/cmejo
 - LinkedIn: https://linkedin.com/in/cmejo
-- Career Goal: Actively seeking Principal / Staff / Lead AI Research Scientist, LLM Systems Engineer, or Quantitative ML Research positions.
+- Career Goal: Actively seeking Principal / Staff AI Scientist, LLM Systems Architect, or Founding ML Lead positions at AI infrastructure scale-ups and high-growth AI startups (Remote, Hybrid, or In-Person).
 
 ## Core Accomplishments & Statistics
 - Solo-architected AI Scholar (github.com/cmejo/AI_Scholar), an open-source hybrid RAG platform indexing 15M+ research papers (Google Summer of Code Fellow 2024 & 2025 with R Foundation).
