@@ -2,7 +2,6 @@
 **AI Research Scientist — LLM & Reinforcement Learning Systems**
 
 - **Email**: [work@cmejo.com](mailto:work@cmejo.com)
-- **Phone**: (917) 747-8865
 - **Location**: New York, NY
 - **Website**: [https://cmejo.com](https://cmejo.com)
 - **Resume (PDF)**: [https://cmejo.com/christopher-mejo-resume.pdf](https://cmejo.com/christopher-mejo-resume.pdf)

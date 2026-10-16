@@ -1,7 +1,6 @@
 # Full Profile: Christopher Mejo, Ph.D.
 **AI Research Scientist — LLM & Reinforcement Learning Systems**
 - Email: work@cmejo.com
-- Phone: (917) 747-8865
 - Location: New York, NY
 - Website: https://cmejo.com
 - GitHub: https://github.com/cmejo
