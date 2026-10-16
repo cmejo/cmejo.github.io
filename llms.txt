@@ -22,7 +22,8 @@ Christopher Mejo is an AI Research Scientist and Engineer with 15+ years taking 
 - Federated medical computer vision (EfficientNet-B7) achieving 0.972 ROC-AUC under differential privacy (ε=1.2, δ=10^-5) across 4 healthcare institutions.
 - Active Top Secret / Sensitive Compartmented Information (TS/SCI) security clearance.
 
-## Machine-Readable Resources
+## Machine-Readable & Printable Resources
+- Full Resume (PDF): https://cmejo.com/christopher-mejo-resume.pdf
 - Full Resume (Markdown): https://cmejo.com/resume.md
 - Full Resume (JSON Resume): https://cmejo.com/resume.json
 - Full Context for LLMs: https://cmejo.com/llms-full.txt
