@@ -3,6 +3,7 @@ User-agent: *
 Disallow: /shannons-launchpad.html
 Disallow: /shannon.html
 Disallow: /shannon*
+Disallow: /name.html
 Allow: /
 
 # Specifically allow AI and LLM user agents

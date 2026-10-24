@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$NAME's Launchpad</title>
+
+  <!-- Prevent search indexing and crawling -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .launchpad-container {
+      max-width: 44rem;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .muse-quote {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--accent);
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 0 0.75rem 1.25rem;
+      margin-bottom: 2.25rem;
+      background: var(--accent-subtle);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      line-height: 1.6;
+    }
+
+    .letter-body {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .homework-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .homework-header {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .homework-header .nb-badge {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: var(--accent);
+      color: #060911;
+      font-weight: 700;
+    }
+
+    .task-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-left: 1.35rem;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .task-list li::marker {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .task-list strong {
+      color: var(--text);
+    }
+
+    .closing-note {
+      font-size: 1rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.75rem;
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .closing-note p {
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar">
+      <span class="brand">
+        <span class="brand-monogram" aria-hidden="true">LP</span>
+        <span>$NAME's Launchpad</span>
+      </span>
+      <div class="nav-right">
+        <div class="nav-controls">
+          <a href="mailto:christopher@cmejo.com" class="btn btn-sm">Email Christopher</a>
+          <button type="button" id="theme-toggle" class="btn icon-btn" aria-label="Switch color theme">☀</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="launchpad-container">
+    <div class="status-pill" style="margin-bottom: 1.5rem;">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Private Learning Portal • Weekend Assignments</span>
+    </div>
+
+    <h1 style="font-size: clamp(2rem, 1.5rem + 2vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 1.75rem;">
+      $NAME's Launchpad
+    </h1>
+
+    <div class="muse-quote">
+      “You have that je ne sais quoi factor that makes me excited to being your Muse.”
+    </div>
+
+    <p class="letter-body">
+      $NAME, I really appreciate your alacrity, there are not many people who take to learning with such curiosity. You surprised me! You really want the goods and you’re willing to put in the work. I like that!
+    </p>
+
+    <section class="homework-card" aria-label="Weekend Homework">
+      <div class="homework-header">
+        <span class="nb-badge">NB</span>
+        <span>This is your homework for the weekend, please send me your writings to <a href="mailto:christopher@cmejo.com">christopher@cmejo.com</a> or text me <a href="tel:19177478865">917-747-8865</a> the docs and I’ll revise them:</span>
+      </div>
+
+      <ol class="task-list">
+        <li>
+          Open up the <a href="https://plato.stanford.edu/contents.html" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy</a> and peruse the table of contents and find 3-5 topics that jump out to you. Make time to finish the next five articles and keep to the schedule. This will be the baseline of your daily journal: when you lack inspiration you can find it in spades in the SEP.
+        </li>
+        <li>
+          Pick which video you want to write 1-2 paragraphs telling me what struck you from either video #1, #2, or #3 in no more than 3 paragraphs and then tell me if any of your long-held beliefs were questioned, if so, which and what was your resolution?
+        </li>
+      </ol>
+    </section>
+
+    <div class="closing-note">
+      <p>This is just the beginning, check back regularly &amp;&amp; let me know if you have any questions!</p>
+      <a href="mailto:christopher@cmejo.com" class="btn btn-primary btn-sm">Send Writings ↗</a>
+    </div>
+  </main>
+</body>
+</html>
