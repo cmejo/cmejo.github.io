@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-ga-id="G-XXXXXXXXXX">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,15 @@
   <!-- Primary SEO & SEM Meta Tags -->
   <title>Christopher Mejo, Ph.D. — AI Research Scientist | LLM &amp; Reinforcement Learning Systems</title>
   <meta name="description" content="Christopher Mejo, Ph.D. — AI Research Scientist and Systems Engineer (15+ years). Harvard Physics Ph.D. (at 21), MIT Postdoc under Scott Aaronson. Architect of production LLM, RAG, distributed training, and reinforcement learning systems.">
-  <meta name="keywords" content="Christopher Mejo, AI Research Scientist, Staff ML Engineer, Principal AI Scientist, LLM Systems, Retrieval-Augmented Generation, RAG, Reinforcement Learning, Distributed Training, DeepSpeed, PyTorch, CUDA, Harvard PhD, MIT Postdoc, Scott Aaronson, AI Scholar, TS/SCI">
+  <meta name="keywords" content="Christopher Mejo, AI Research Scientist, Staff ML Engineer, Principal AI Scientist, AI Consulting, LLM Systems, Retrieval-Augmented Generation, RAG, Reinforcement Learning, Distributed Training, DeepSpeed, PyTorch, CUDA, Harvard PhD, MIT Postdoc, Scott Aaronson, AI Scholar, TS/SCI">
   <meta name="author" content="Christopher Mejo, Ph.D.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#080c14">
   <link rel="canonical" href="https://cmejo.com/">
+
+  <!-- Resource Hints for Non-Blocking Analytics -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -29,17 +34,19 @@
   <!-- Open Graph / LinkedIn -->
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://cmejo.com/">
-  <meta property="og:title" content="Christopher Mejo, Ph.D. — AI Research Scientist">
+  <meta property="og:title" content="Christopher Mejo, Ph.D. — AI Research Scientist &amp; Systems Architect">
   <meta property="og:description" content="15+ years taking ML systems from mathematical theory to production. Harvard Physics Ph.D. (at 21), MIT Postdoc under Scott Aaronson. LLMs, Hybrid RAG, and Reinforcement Learning.">
   <meta property="og:site_name" content="Christopher Mejo, Ph.D.">
+  <meta property="og:image" content="https://cmejo.com/apple-touch-icon.png">
   <meta property="profile:first_name" content="Christopher">
   <meta property="profile:last_name" content="Mejo">
   <meta property="profile:username" content="cmejo">
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Christopher Mejo, Ph.D. — AI Research Scientist">
+  <meta name="twitter:title" content="Christopher Mejo, Ph.D. — AI Research Scientist &amp; Systems Architect">
   <meta name="twitter:description" content="15+ years taking ML systems from theory to production. Harvard Ph.D. (at 21), MIT Postdoc. LLMs, RAG, and Reinforcement Learning.">
+  <meta name="twitter:image" content="https://cmejo.com/apple-touch-icon.png">
 
   <!-- Structured Data (JSON-LD) for Search Engines & LLM Agents -->
   <script type="application/ld+json">
@@ -130,29 +137,28 @@
   </script>
 
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="#about" class="brand">
+      <a href="#about" class="brand" data-track="nav_brand">
         <span class="brand-monogram" aria-hidden="true">CM</span>
         <span>Christopher Mejo, Ph.D.</span>
       </a>
       <div class="nav-right">
         <nav aria-label="Primary">
           <ul class="nav-links">
-            <li><a href="#systems">Systems</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#credentials">Credentials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#systems" data-track="nav_systems">Systems</a></li>
+            <li><a href="#experience" data-track="nav_experience">Experience</a></li>
+            <li><a href="#research" data-track="nav_research">Research</a></li>
+            <li><a href="#credentials" data-track="nav_credentials">Credentials</a></li>
+            <li><a href="#contact" data-track="nav_contact">Contact</a></li>
           </ul>
         </nav>
         <div class="nav-controls">
-          <a href="christopher-mejo-resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+          <a href="christopher-mejo-resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener" data-track="resume_view_header">
             <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9.5 1.5H4a1.5 1.5 0 0 0-1.5 1.5v10A1.5 1.5 0 0 0 4 14.5h8a1.5 1.5 0 0 0 1.5-1.5V5.5L9.5 1.5Z"/><path d="M9.5 1.5v4h4"/></svg>
             <span>Resume PDF</span>
           </a>
@@ -168,7 +174,7 @@
     <section id="about" class="hero" aria-labelledby="name-heading">
       <div class="status-pill">
         <span class="status-dot" aria-hidden="true"></span>
-        <span>New York, NY • Open to Principal / Staff AI Research &amp; Systems Roles</span>
+        <span>New York, NY • Principal / Staff AI Research, Systems Architecture &amp; Advisory</span>
       </div>
 
       <h1 id="name-heading">Christopher Mejo, Ph.D.</h1>
@@ -182,17 +188,18 @@
       </p>
 
       <div class="hero-actions">
-        <a href="christopher-mejo-resume.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+        <a href="christopher-mejo-resume.pdf" class="btn btn-primary" target="_blank" rel="noopener" data-track="resume_view_hero">
           <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9.5 1.5H4a1.5 1.5 0 0 0-1.5 1.5v10A1.5 1.5 0 0 0 4 14.5h8a1.5 1.5 0 0 0 1.5-1.5V5.5L9.5 1.5Z"/><path d="M9.5 1.5v4h4"/></svg>
           <span>View Resume (PDF)</span>
         </a>
-        <a href="christopher-mejo-resume.pdf" download="Christopher_Mejo_PhD_Resume.pdf" class="btn">
+        <a href="christopher-mejo-resume.pdf" download="Christopher_Mejo_PhD_Resume.pdf" class="btn" data-track="resume_download_hero">
           <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M8 2v8.5m0 0L4.5 7m3.5 3.5L11.5 7M2.5 13.5h11"/></svg>
           <span>Download PDF</span>
         </a>
-        <a href="mailto:work@cmejo.com" class="btn">work@cmejo.com</a>
-        <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-        <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+        <a href="mailto:work@cmejo.com" class="btn" data-track="email_click_hero">work@cmejo.com</a>
+        <button type="button" class="btn copy-email" data-email="work@cmejo.com" data-track="email_copy_hero" aria-label="Copy work@cmejo.com to clipboard">Copy Email</button>
+        <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_linkedin_hero">LinkedIn ↗</a>
+        <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_github_hero">GitHub ↗</a>
       </div>
 
       <dl class="metrics-bar" aria-label="Key career metrics">
@@ -230,7 +237,7 @@
         <article class="card">
           <div class="card-top">
             <span class="card-badge">Open Source • GSoC ’24 &amp; ’25</span>
-            <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer" class="card-link">GitHub ↗</a>
+            <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer" class="card-link" data-track="project_ai_scholar">GitHub ↗</a>
           </div>
           <h3 class="card-title">AI Scholar Hybrid RAG</h3>
           <p class="card-body">
@@ -270,7 +277,7 @@
           <h2 id="exp-heading" class="section-title">Industry Experience</h2>
         </div>
         <div class="no-print">
-          <a href="christopher-mejo-resume.pdf" download="Christopher_Mejo_PhD_Resume.pdf" class="btn btn-sm">
+          <a href="christopher-mejo-resume.pdf" download="Christopher_Mejo_PhD_Resume.pdf" class="btn btn-sm" data-track="resume_download_experience">
             <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M8 2v8.5m0 0L4.5 7m3.5 3.5L11.5 7M2.5 13.5h11"/></svg>
             <span>Full Resume (PDF)</span>
           </a>
@@ -367,7 +374,7 @@
           <div class="role-header">
             <div>
               <h3 class="role-title">Google Summer of Code Fellow (2024 &amp; 2025)</h3>
-              <span class="role-company">R Foundation for Statistical Computing — <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer">AI Scholar</a></span>
+              <span class="role-company">R Foundation for Statistical Computing — <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer" data-track="project_ai_scholar_research">AI Scholar</a></span>
             </div>
             <time class="role-date" datetime="2024">2024 – 2025</time>
           </div>
@@ -472,15 +479,15 @@
         <div>
           <h2 id="contact-heading" class="section-title">Get in Touch</h2>
           <p class="contact-copy">
-            Available for Principal / Staff AI Research Scientist, LLM Systems Architect, and Founding ML Lead roles (New York, Hybrid, or Remote).
+            Available for Principal / Staff AI Research Scientist roles, LLM Systems Architecture, Founding ML Lead opportunities, and technical AI advisory (New York, Hybrid, or Remote).
           </p>
         </div>
         <address class="contact-actions">
-          <a href="mailto:work@cmejo.com" class="btn btn-primary">work@cmejo.com</a>
-          <button type="button" class="btn copy-email" aria-label="Copy email address to clipboard">Copy Email</button>
-          <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn">Resume (PDF)</a>
-          <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
-          <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+          <a href="mailto:work@cmejo.com" class="btn btn-primary" data-track="email_click_contact">work@cmejo.com</a>
+          <button type="button" class="btn copy-email" data-email="work@cmejo.com" data-track="email_copy_contact" aria-label="Copy email address to clipboard">Copy Email</button>
+          <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn" data-track="resume_view_contact">Resume (PDF)</a>
+          <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_linkedin_contact">LinkedIn ↗</a>
+          <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_github_contact">GitHub ↗</a>
         </address>
       </div>
     </section>
@@ -491,16 +498,19 @@
     <div class="container footer-inner">
       <span>© 2026 Christopher Mejo, Ph.D. • New York, NY</span>
       <ul class="footer-links" aria-label="Document &amp; Machine-Readable Formats">
-        <li><a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-        <li><a href="resume.md">Resume.md</a></li>
-        <li><a href="resume.json">Resume.json</a></li>
-        <li><a href="llms.txt">llms.txt</a></li>
-        <li><a href="llms-full.txt">llms-full.txt</a></li>
-        <li><a href="sitemap.xml">Sitemap</a></li>
+        <li><a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" data-track="resume_view_footer">Resume (PDF)</a></li>
+        <li><a href="resume.md" data-track="resource_resume_md">Resume.md</a></li>
+        <li><a href="resume.json" data-track="resource_resume_json">Resume.json</a></li>
+        <li><a href="llms.txt" data-track="resource_llms_txt">llms.txt</a></li>
+        <li><a href="llms-full.txt" data-track="resource_llms_full">llms-full.txt</a></li>
+        <li><a href="sitemap.xml" data-track="resource_sitemap">Sitemap</a></li>
       </ul>
     </div>
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Deferred Application & Social Attribution Script (Non-Blocking per CRP best practices) -->
+  <script defer src="script.js"></script>
 </body>
 </html>
