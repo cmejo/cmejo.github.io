@@ -988,7 +988,7 @@ dialog::backdrop {
 }
 
 .page-hero.contact-hero {
-  padding-top: 1.35rem; /* Exactly half of previous 2.75rem whitespace */
+  padding-top: 1rem;
 }
 
 .page-hero h1 {
