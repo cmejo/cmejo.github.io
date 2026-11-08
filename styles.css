@@ -959,9 +959,10 @@ dialog::backdrop {
 }
 
 .form-hint {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  margin-block-start: 0.3rem;
+  margin-block-end: 0.45rem;
+  line-height: 1.4;
 }
 
 .form-error {
