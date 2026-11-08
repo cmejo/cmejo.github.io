@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-ga-id="G-XXXXXXXXXX">
+<html lang="en" data-theme="light" data-ga-id="G-XXXXXXXXXX">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
 
   <!-- Primary SEO & SEM Meta Tags -->
-  <title>Christopher Mejo, Ph.D. — AI Research Scientist | LLM &amp; Reinforcement Learning Systems</title>
-  <meta name="description" content="Christopher Mejo, Ph.D. — AI Research Scientist and Systems Engineer (15+ years). Harvard Physics Ph.D. (at 21), MIT Postdoc under Scott Aaronson. Architect of production LLM, RAG, distributed training, and reinforcement learning systems.">
-  <meta name="keywords" content="Christopher Mejo, AI Research Scientist, Staff ML Engineer, Principal AI Scientist, AI Consulting, LLM Systems, Retrieval-Augmented Generation, RAG, Reinforcement Learning, Distributed Training, DeepSpeed, PyTorch, CUDA, Harvard PhD, MIT Postdoc, Scott Aaronson, AI Scholar, TS/SCI">
+  <title>Christopher Mejo, Ph.D. — AI Research Scientist, LLM Systems Architect &amp; Advisor</title>
+  <meta name="description" content="Christopher Mejo, Ph.D. — AI Research Scientist, Systems Engineer, and Technical Advisor (15+ years). Harvard Physics Ph.D. (at 21), MIT Postdoc under Scott Aaronson. Production LLMs, Hybrid RAG, Distributed Training, and Reinforcement Learning.">
+  <meta name="keywords" content="Christopher Mejo, AI Research Scientist, Staff ML Engineer, Principal AI Scientist, AI Consulting, Fractional Chief AI Officer, LLM Systems Architect, Retrieval-Augmented Generation, RAG, Reinforcement Learning, Distributed Training, DeepSpeed, PyTorch, CUDA, Harvard PhD, MIT Postdoc, Scott Aaronson, AI Scholar, TS/SCI">
   <meta name="author" content="Christopher Mejo, Ph.D.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-  <meta name="theme-color" content="#080c14">
+  <meta name="theme-color" content="#ffffff">
   <link rel="canonical" href="https://cmejo.com/">
 
   <!-- Resource Hints for Non-Blocking Analytics -->
@@ -57,7 +58,7 @@
         "@type": "ProfilePage",
         "@id": "https://cmejo.com/#webpage",
         "url": "https://cmejo.com/",
-        "name": "Christopher Mejo, Ph.D. — AI Research Scientist",
+        "name": "Christopher Mejo, Ph.D. — AI Research Scientist & Systems Architect",
         "mainEntity": { "@id": "https://cmejo.com/#person" }
       },
       {
@@ -68,7 +69,7 @@
         "familyName": "Mejo",
         "honorificSuffix": "Ph.D.",
         "jobTitle": "AI Research Scientist — LLM & Reinforcement Learning Systems",
-        "description": "AI research scientist and systems engineer with 15+ years taking machine learning systems from mathematical theory to high-throughput production. Ph.D. in Physics from Harvard (completed at 21) and MIT Postdoc under Scott Aaronson.",
+        "description": "AI research scientist, systems engineer, and technical advisor with 15+ years taking machine learning systems from mathematical theory to high-throughput production. Ph.D. in Physics from Harvard (completed at 21) and MIT Postdoc under Scott Aaronson.",
         "email": "mailto:work@cmejo.com",
         "url": "https://cmejo.com/",
         "address": {
@@ -126,6 +127,19 @@
         ]
       },
       {
+        "@type": "ProfessionalService",
+        "@id": "https://cmejo.com/#advisory",
+        "name": "Christopher Mejo, Ph.D. — AI Systems Architecture & Technical Advisory",
+        "provider": { "@id": "https://cmejo.com/#person" },
+        "url": "https://cmejo.com/#advisory",
+        "areaServed": "Global",
+        "serviceType": [
+          "Production RAG & Agentic Systems Architecture",
+          "Distributed LLM Pretraining & Inference Latency Optimization",
+          "Fractional Principal AI Scientist & Technical Due Diligence"
+        ]
+      },
+      {
         "@type": "SoftwareSourceCode",
         "name": "AI Scholar",
         "author": { "@id": "https://cmejo.com/#person" },
@@ -151,18 +165,22 @@
         <nav aria-label="Primary">
           <ul class="nav-links">
             <li><a href="#systems" data-track="nav_systems">Systems</a></li>
+            <li><a href="#advisory" data-track="nav_advisory">Advisory</a></li>
             <li><a href="#experience" data-track="nav_experience">Experience</a></li>
-            <li><a href="#research" data-track="nav_research">Research</a></li>
+            <li><a href="#notes" data-track="nav_notes">Notes</a></li>
             <li><a href="#credentials" data-track="nav_credentials">Credentials</a></li>
             <li><a href="#contact" data-track="nav_contact">Contact</a></li>
           </ul>
         </nav>
         <div class="nav-controls">
+          <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="15-Min Intro Call" data-track="book_call_header">
+            Book Intro Call
+          </button>
           <a href="christopher-mejo-resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener" data-track="resume_view_header">
             <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9.5 1.5H4a1.5 1.5 0 0 0-1.5 1.5v10A1.5 1.5 0 0 0 4 14.5h8a1.5 1.5 0 0 0 1.5-1.5V5.5L9.5 1.5Z"/><path d="M9.5 1.5v4h4"/></svg>
             <span>Resume PDF</span>
           </a>
-          <button type="button" id="theme-toggle" class="btn icon-btn" aria-label="Switch color theme">☀</button>
+          <button type="button" id="theme-toggle" class="btn icon-btn" aria-label="Switch to dark theme">☾</button>
         </div>
       </div>
     </div>
@@ -174,7 +192,7 @@
     <section id="about" class="hero" aria-labelledby="name-heading">
       <div class="status-pill">
         <span class="status-dot" aria-hidden="true"></span>
-        <span>New York, NY • Principal / Staff AI Research, Systems Architecture &amp; Advisory</span>
+        <span>New York, NY • Open to Principal / Staff AI Roles &amp; Technical Advisory</span>
       </div>
 
       <h1 id="name-heading">Christopher Mejo, Ph.D.</h1>
@@ -188,7 +206,11 @@
       </p>
 
       <div class="hero-actions">
-        <a href="christopher-mejo-resume.pdf" class="btn btn-primary" target="_blank" rel="noopener" data-track="resume_view_hero">
+        <button type="button" class="btn btn-primary open-inquiry-btn" data-inquiry-track="15-Min Intro Call" data-track="book_call_hero">
+          <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 1.5v2M11 1.5v2M2 6.5h12"/></svg>
+          <span>Book a 15-Min Intro Call</span>
+        </button>
+        <a href="christopher-mejo-resume.pdf" class="btn" target="_blank" rel="noopener" data-track="resume_view_hero">
           <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9.5 1.5H4a1.5 1.5 0 0 0-1.5 1.5v10A1.5 1.5 0 0 0 4 14.5h8a1.5 1.5 0 0 0 1.5-1.5V5.5L9.5 1.5Z"/><path d="M9.5 1.5v4h4"/></svg>
           <span>View Resume (PDF)</span>
         </a>
@@ -196,8 +218,7 @@
           <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M8 2v8.5m0 0L4.5 7m3.5 3.5L11.5 7M2.5 13.5h11"/></svg>
           <span>Download PDF</span>
         </a>
-        <a href="mailto:work@cmejo.com" class="btn" data-track="email_click_hero">work@cmejo.com</a>
-        <button type="button" class="btn copy-email" data-email="work@cmejo.com" data-track="email_copy_hero" aria-label="Copy work@cmejo.com to clipboard">Copy Email</button>
+        <button type="button" class="btn copy-email" data-email="work@cmejo.com" data-track="email_copy_hero" aria-label="Copy work@cmejo.com to clipboard">Copy work@cmejo.com</button>
         <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_linkedin_hero">LinkedIn ↗</a>
         <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_github_hero">GitHub ↗</a>
       </div>
@@ -230,7 +251,7 @@
     <section id="systems" class="section" aria-labelledby="systems-heading">
       <div class="section-header">
         <h2 id="systems-heading" class="section-title">Selected Systems</h2>
-        <span class="section-kicker">Core Architecture &amp; Research Focus</span>
+        <span class="section-kicker">Core Architecture &amp; Production Benchmarks</span>
       </div>
 
       <div class="cards-grid">
@@ -266,6 +287,67 @@
             Deep Q-network, actor-critic, and Heterogeneous Graph Attention (HAN) systems operating on non-stationary streaming data at microsecond latency across 1B+ daily market events.
           </p>
           <p class="card-metric">6.2 live Sharpe (24-mo continuous)</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Feature 1: AI Advisory & Fractional Principal Scientist Services -->
+    <section id="advisory" class="section" aria-labelledby="advisory-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="advisory-heading" class="section-title">AI Advisory &amp; Systems Architecture</h2>
+        </div>
+        <span class="section-kicker">Consulting, Architecture Sprints &amp; Leadership</span>
+      </div>
+
+      <p class="section-intro">
+        Alongside Principal / Staff AI Research roles, I partner with funded AI startups, enterprise engineering teams, and institutional investors to architect and scale high-reliability ML systems.
+      </p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Architecture Sprint</span>
+          </div>
+          <h3 class="card-title">Production RAG &amp; Agentic Systems</h3>
+          <p class="card-body">
+            Move beyond fragile vector-only prototypes. I design hybrid dense + lexical + knowledge-graph retrieval (FAISS, BM25, Neo4j) with strict source attribution, relevance evaluation (NDCG/MRR), and calibrated hallucination guards.
+          </p>
+          <div class="card-footer">
+            <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="AI Advisory & Architecture Sprint" data-track="advisory_rag_click">
+              Inquire About RAG Architecture →
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Training &amp; Inference</span>
+          </div>
+          <h3 class="card-title">Custom LLMs &amp; Latency Engineering</h3>
+          <p class="card-body">
+            End-to-end distributed pretraining and domain fine-tuning (7B–70B models, DeepSpeed ZeRO-3, custom CUDA kernels, vLLM) engineered to cut GPU compute spend and tail latency in high-throughput production.
+          </p>
+          <div class="card-footer">
+            <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="AI Advisory & Architecture Sprint" data-track="advisory_latency_click">
+              Inquire About LLM Optimization →
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-badge">Executive &amp; Investor Advisory</span>
+          </div>
+          <h3 class="card-title">Fractional Principal Scientist &amp; Due Diligence</h3>
+          <p class="card-body">
+            Fractional AI research leadership for Seed–Series B companies building their core ML team, plus rigorous technical due diligence on foundation model, RL, and quantum startups for VC and PE firms.
+          </p>
+          <div class="card-footer">
+            <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="Fractional Principal AI Scientist" data-track="advisory_fractional_click">
+              Schedule Advisory Intro →
+            </button>
+          </div>
         </article>
       </div>
     </section>
@@ -402,6 +484,70 @@
       </div>
     </section>
 
+    <!-- Feature 3: Engineering Notes & Architecture Briefs -->
+    <section id="notes" class="section" aria-labelledby="notes-heading">
+      <div class="section-header">
+        <h2 id="notes-heading" class="section-title">Engineering Notes &amp; Architecture Briefs</h2>
+        <span class="section-kicker">Technical Deep Dives</span>
+      </div>
+
+      <div class="notes-list">
+        <details id="note-hybrid-rag" class="note-item" open>
+          <summary class="note-summary" data-track="note_open_hybrid_rag">
+            <div class="note-meta">
+              <span class="card-badge">Architecture Brief 01 • Retrieval Systems</span>
+              <h3 class="note-title">Why Dense-Only Vector Search Fails at 15M+ Documents: Designing Tri-Modal Hybrid RAG</h3>
+            </div>
+            <span class="note-toggle-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="note-content">
+            <p>
+              Standard dense-embedding RAG pipelines degrade sharply once a corpus crosses millions of technical documents. Dense bi-encoders compress whole passages into fixed-dimensional vectors, smoothing over exact mathematical notation, rare gene/chemical identifiers, and multi-hop citation structure.
+            </p>
+            <p>
+              In <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer">AI Scholar</a> (15M+ scientific papers), we solved this by routing queries across three complementary indices: <strong>FAISS</strong> (semantic dense embeddings), <strong>BM25</strong> (exact lexical and symbol matching), and <strong>Neo4j</strong> (citation and entity-relation knowledge graphs built via spaCy and BERT-NER). Using a Model-Agnostic Meta-Learning (MAML) retrieval router to dynamically weight each modality per query intent improved relevance by <strong>+40% NDCG@10</strong> on our 200-query citation-grounded benchmark.
+            </p>
+          </div>
+        </details>
+
+        <details id="note-cuda-tokenizers" class="note-item">
+          <summary class="note-summary" data-track="note_open_cuda_tokenizers">
+            <div class="note-meta">
+              <span class="card-badge">Architecture Brief 02 • Distributed Systems</span>
+              <h3 class="note-title">Cutting 7B–14B LLM Step Latency by 38% with Custom CUDA Memory-Mapped Tokenizers &amp; ZeRO-3</h3>
+            </div>
+            <span class="note-toggle-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="note-content">
+            <p>
+              When pretraining and instruction fine-tuning domain-specific 7B–14B parameter foundation models across multi-GPU clusters, GPU compute often stalls on CPU-bound data loading, tokenization serialization, and all-gather communication overhead.
+            </p>
+            <p>
+              By pairing <strong>DeepSpeed ZeRO-3</strong> parameter sharding with custom <strong>CUDA memory-mapped (`mmap`) pre-tokenized data streams</strong> and fused rotary-position kernels, we eliminated host-to-device serialization bottlenecks and overlapped communication with backward-pass computation—reducing wall-clock step latency by <strong>38%</strong> across continuous training runs.
+            </p>
+          </div>
+        </details>
+
+        <details id="note-epistemic-uncertainty" class="note-item">
+          <summary class="note-summary" data-track="note_open_uncertainty">
+            <div class="note-meta">
+              <span class="card-badge">Architecture Brief 03 • High-Stakes AI Reliability</span>
+              <h3 class="note-title">Calibrated Epistemic Uncertainty in Production LLMs &amp; Federated Clinical Vision</h3>
+            </div>
+            <span class="note-toggle-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="note-content">
+            <p>
+              In regulated domains—whether quantitative capital allocation, clinical diagnostics, or scientific synthesis—raw softmax probabilities are notoriously overconfident out-of-distribution.
+            </p>
+            <p>
+              Across both our federated clinical chest X-ray diagnostic system (0.972 ROC-AUC under ε = 1.2 differential privacy across 4 hospitals) and our chain-of-thought RAG synthesis pipelines, combining <strong>Monte Carlo dropout</strong> with <strong>evidential deep learning</strong> provides decomposed aleatoric and epistemic uncertainty bounds—allowing the system to abstain or flag low-confidence claims rather than hallucinate.
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <!-- Education, Clearance & Technical Stack -->
     <section id="credentials" class="section" aria-labelledby="cred-heading">
       <div class="two-col">
@@ -479,11 +625,17 @@
         <div>
           <h2 id="contact-heading" class="section-title">Get in Touch</h2>
           <p class="contact-copy">
-            Available for Principal / Staff AI Research Scientist roles, LLM Systems Architecture, Founding ML Lead opportunities, and technical AI advisory (New York, Hybrid, or Remote).
+            Available for Principal / Staff AI Research Scientist roles, LLM Systems Architecture sprints, Fractional Principal Scientist retainers, and technical due diligence (New York, Hybrid, or Remote).
           </p>
         </div>
         <address class="contact-actions">
-          <a href="mailto:work@cmejo.com" class="btn btn-primary" data-track="email_click_contact">work@cmejo.com</a>
+          <button type="button" class="btn btn-primary open-inquiry-btn" data-inquiry-track="15-Min Intro Call" data-track="book_call_contact">
+            Book a 15-Min Intro Call
+          </button>
+          <button type="button" class="btn open-inquiry-btn" data-inquiry-track="AI Advisory & Architecture Sprint" data-track="open_form_contact">
+            Send Project / Role Inquiry
+          </button>
+          <a href="mailto:work@cmejo.com" class="btn" data-track="email_click_contact">work@cmejo.com</a>
           <button type="button" class="btn copy-email" data-email="work@cmejo.com" data-track="email_copy_contact" aria-label="Copy email address to clipboard">Copy Email</button>
           <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn" data-track="resume_view_contact">Resume (PDF)</a>
           <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn" data-track="social_linkedin_contact">LinkedIn ↗</a>
@@ -493,6 +645,92 @@
     </section>
 
   </main>
+
+  <!-- Feature 2 & 6: Native Accessible Modal Dialog for Intro Call & Project/Role Inquiry -->
+  <dialog id="inquiry-dialog" closedby="any" aria-labelledby="inquiry-dialog-title">
+    <div class="dialog-inner">
+      <div class="dialog-header">
+        <div>
+          <span class="card-badge">Direct Dispatch • work@cmejo.com</span>
+          <h2 id="inquiry-dialog-title" class="dialog-title">Book an Intro Call or Send an Inquiry</h2>
+        </div>
+        <form method="dialog">
+          <button type="submit" value="cancel" class="btn icon-btn" aria-label="Close inquiry dialog">✕</button>
+        </form>
+      </div>
+
+      <p class="dialog-subtitle">
+        Select how you would like to connect below. Submissions go directly to <strong>work@cmejo.com</strong> with priority response.
+      </p>
+
+      <form id="inquiry-form" action="https://formspree.io/f/work@cmejo.com" method="POST" novalidate>
+        <!-- Honeypot spam protection (visually-hidden per modern-web-guidance) -->
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="inquiry-gotcha">Leave this field blank</label>
+          <input type="text" id="inquiry-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- Hidden Social & Campaign Attribution Fields -->
+        <input type="hidden" id="attr-source" name="social_source" value="direct">
+        <input type="hidden" id="attr-channel" name="traffic_channel" value="direct">
+        <input type="hidden" id="attr-campaign" name="utm_campaign" value="(not set)">
+        <input type="hidden" id="attr-referrer" name="referrer_url" value="direct">
+
+        <!-- 4 Mutually Exclusive Options -> Visible Radio Buttons per forms Decision Matrix -->
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Engagement Track (Required)</legend>
+          <div class="radio-grid">
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="15-Min Intro Call" checked required>
+              <span>15-Min Intro Call</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="Principal / Staff AI Role">
+              <span>Principal / Staff AI Role</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="AI Advisory & Architecture Sprint">
+              <span>AI Advisory / Sprint</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="Fractional Principal AI Scientist">
+              <span>Fractional / Due Diligence</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inquiry-name" class="form-label">Full name <span class="req-tag">(Required)</span></label>
+            <input type="text" id="inquiry-name" name="full_name" class="form-input" autocomplete="name" maxlength="100" required autofocus enterkeyhint="next">
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry-email" class="form-label">Work email <span class="req-tag">(Required)</span></label>
+            <input type="email" id="inquiry-email" name="email" class="form-input" autocomplete="email" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="120" required enterkeyhint="next">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry-org" class="form-label">Company or organization</label>
+          <input type="text" id="inquiry-org" name="organization" class="form-input" autocomplete="organization" maxlength="120" enterkeyhint="next">
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry-message" class="form-label">Context, role details, or preferred times for a 15-min call <span class="req-tag">(Required)</span></label>
+          <textarea id="inquiry-message" name="message" class="form-textarea" rows="3" maxlength="2000" required aria-describedby="inquiry-help" enterkeyhint="send"></textarea>
+          <span id="inquiry-help" class="form-hint">Include a brief note on your system goals, role scope, or 2–3 time windows (EST) for a call.</span>
+        </div>
+
+        <div id="form-error-msg" class="form-error" role="alert" aria-live="polite"></div>
+
+        <div class="dialog-actions">
+          <button type="button" id="dialog-cancel-btn" class="btn">Cancel</button>
+          <button type="submit" id="inquiry-submit-btn" class="btn btn-primary">Send Request to Christopher →</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <div class="container footer-inner">
