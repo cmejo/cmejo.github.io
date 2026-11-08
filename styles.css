@@ -207,11 +207,11 @@ a:hover {
 .brand {
   display: inline-flex;
   align-items: center;
-  font-weight: 750;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.25rem;
   color: var(--text);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .brand:hover {
