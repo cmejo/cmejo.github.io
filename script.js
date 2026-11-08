@@ -195,15 +195,8 @@ function bindInquiryFormValidationAndSubmit(form, dialog, attribution) {
     });
   });
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    // Honeypot check
-    const gotcha = form.querySelector('input[name="_gotcha"]');
-    if (gotcha && gotcha.value) {
-      if (dialog && dialog.open) dialog.close('honeypot');
-      return;
-    }
 
     // Validate all required fields on submit
     if (!form.checkValidity()) {
@@ -228,12 +221,6 @@ function bindInquiryFormValidationAndSubmit(form, dialog, attribution) {
     const org = formData.get('organization') || 'Not specified';
     const message = formData.get('message') || '';
 
-    const originalBtnText = submitBtn ? submitBtn.textContent : '';
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-    }
-
     trackEvent('generate_lead', {
       event_category: 'conversion_inquiry',
       engagement_track: track,
@@ -243,43 +230,25 @@ function bindInquiryFormValidationAndSubmit(form, dialog, attribution) {
       utm_campaign: attribution.utm_campaign
     });
 
-    // Attempt direct Formspree POST; gracefully fall back to pre-formatted mailto so zero leads are lost
-    let sentViaEndpoint = false;
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' }
-      });
-      if (response.ok) {
-        sentViaEndpoint = true;
-      }
-    } catch {
-      sentViaEndpoint = false;
-    }
+    // Directly open pre-formatted mailto to work@cmejo.com with zero third-party intermediaries
+    const subject = encodeURIComponent(`[${track}] ${fullName}${org !== 'Not specified' ? ' (' + org + ')' : ''}`);
+    const body = encodeURIComponent(
+      `Hi Christopher,\n\n` +
+      `I am reaching out regarding: ${track}\n\n` +
+      `Name: ${fullName}\n` +
+      `Email: ${email}\n` +
+      `Company / Organization: ${org}\n\n` +
+      `Context / Proposed Call Times:\n${message}\n\n` +
+      `---\nReferral Context: ${attribution.network} (${attribution.channel}) | Page: ${window.location.pathname}`
+    );
 
-    if (!sentViaEndpoint) {
-      const subject = encodeURIComponent(`[${track}] ${fullName}${org !== 'Not specified' ? ' (' + org + ')' : ''}`);
-      const body = encodeURIComponent(
-        `Engagement Track: ${track}\n` +
-        `Name: ${fullName}\n` +
-        `Email: ${email}\n` +
-        `Organization: ${org}\n\n` +
-        `Message / Call Times:\n${message}\n\n` +
-        `---\nReferral Source: ${attribution.network} (${attribution.channel}) | Page: ${window.location.pathname}`
-      );
-      window.location.href = `mailto:work@cmejo.com?subject=${subject}&body=${body}`;
-    }
+    window.location.href = `mailto:work@cmejo.com?subject=${subject}&body=${body}`;
 
     form.reset();
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalBtnText;
-    }
     if (dialog && dialog.open) {
       dialog.close('submitted');
     }
-    showToast('Inquiry prepared for Christopher (work@cmejo.com) ✓');
+    showToast('Opening your email client to dispatch to work@cmejo.com ✓');
   });
 }
 

@@ -24,7 +24,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cmejo.com/contact.html">
   <meta property="og:title" content="Contact &amp; Book a 15-Min Intro Call | Christopher Mejo, Ph.D.">
-  <meta property="og:description" content="Direct dispatch to work@cmejo.com for Principal/Staff AI roles, architecture sprints, and fractional advisory.">
+  <meta property="og:description" content="Direct message to work@cmejo.com for Principal/Staff AI roles, architecture sprints, and fractional advisory.">
   <meta property="og:image" content="https://cmejo.com/apple-touch-icon.png">
 
   <script type="application/ld+json">
@@ -94,26 +94,30 @@
       </div>
       <h1 id="page-heading">Book an Intro Call or Send an Inquiry</h1>
       <p class="page-hero-lead">
-        Whether you are hiring for a Principal / Staff AI Scientist role, scoping a 2–4 week RAG or LLM latency sprint, or conducting technical due diligence, use the form below or reach out directly at <strong>work@cmejo.com</strong>.
+        Whether you are hiring for a Principal / Staff AI Scientist role, scoping a 2–4 week RAG or LLM latency sprint, or conducting technical due diligence, submit the form below or email directly at <a href="mailto:work@cmejo.com">work@cmejo.com</a>.
       </p>
+
+      <!-- Links moved to the very first line of the contact page per user request -->
+      <nav class="contact-links-bar" aria-label="Profiles and Resume Documents">
+        <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="social_linkedin_contact_page">LinkedIn ↗</a>
+        <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="social_github_contact_page">GitHub ↗</a>
+        <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="project_ai_scholar_contact_page">AI Scholar Repo ↗</a>
+        <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn btn-sm" data-track="resume_pdf_contact_page">Resume (PDF)</a>
+        <a href="resume.md" class="btn btn-sm" data-track="resume_md_contact_page">Resume.md</a>
+        <a href="resume.json" class="btn btn-sm" data-track="resume_json_contact_page">Resume.json</a>
+      </nav>
     </section>
 
-    <section class="section contact-section" aria-label="Direct Inquiry and Channels">
-      <div class="contact-page-grid">
+    <section class="section contact-section" aria-label="Direct Inquiry">
+      <div class="contact-form-center">
 
         <!-- Inline Interactive Form Card -->
         <div class="inline-form-card">
           <div class="section-header">
-            <span class="card-badge">Direct Dispatch • work@cmejo.com</span>
             <h2 class="dialog-title">Schedule a 15-Min Call or Scope an Engagement</h2>
           </div>
 
-          <form id="contact-page-form" data-inquiry-form action="https://formspree.io/f/work@cmejo.com" method="POST" novalidate>
-            <div class="visually-hidden" aria-hidden="true">
-              <label for="page-gotcha">Leave this field blank</label>
-              <input type="text" id="page-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-            </div>
-
+          <form id="contact-page-form" data-inquiry-form novalidate>
             <input type="hidden" name="social_source" value="direct">
             <input type="hidden" name="traffic_channel" value="direct">
             <input type="hidden" name="utm_campaign" value="(not set)">
@@ -172,48 +176,6 @@
           </form>
         </div>
 
-        <!-- Direct Contact & Profiles Sidebar -->
-        <aside class="direct-channels-card" aria-label="Direct Contact Channels">
-          <h2 class="dialog-title">Direct Channels &amp; Profiles</h2>
-          <p class="cred-sub">
-            Prefer direct email or reviewing machine-readable credentials first? Use any of the channels below.
-          </p>
-
-          <ul class="direct-channels-list" role="list">
-            <li>
-              <span class="channel-label">Primary Work &amp; Advisory Email</span>
-              <div class="hero-actions">
-                <a href="mailto:work@cmejo.com" class="btn btn-sm" data-track="email_click_contact_page">work@cmejo.com</a>
-                <button type="button" class="btn btn-sm copy-email" data-email="work@cmejo.com" data-track="email_copy_contact_page">Copy Email</button>
-              </div>
-            </li>
-            <li>
-              <span class="channel-label">Base Location &amp; Availability</span>
-              <div class="cred-sub"><strong>New York, NY</strong> • Available for In-Person (NYC), Hybrid, or Remote engagements worldwide.</div>
-            </li>
-            <li>
-              <span class="channel-label">Security Clearance</span>
-              <div class="cred-sub"><strong>Active TS/SCI</strong> (Top Secret / Sensitive Compartmented Information)</div>
-            </li>
-            <li>
-              <span class="channel-label">Professional Networks &amp; Code</span>
-              <div class="hero-actions">
-                <a href="https://linkedin.com/in/cmejo" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="social_linkedin_contact_page">LinkedIn ↗</a>
-                <a href="https://github.com/cmejo" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="social_github_contact_page">GitHub ↗</a>
-                <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer" class="btn btn-sm" data-track="project_ai_scholar_contact_page">AI Scholar Repo ↗</a>
-              </div>
-            </li>
-            <li>
-              <span class="channel-label">Curriculum Vitae &amp; Schemas</span>
-              <div class="hero-actions">
-                <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn btn-sm" data-track="resume_pdf_contact_page">Resume (PDF)</a>
-                <a href="resume.md" class="btn btn-sm" data-track="resume_md_contact_page">Resume.md</a>
-                <a href="resume.json" class="btn btn-sm" data-track="resume_json_contact_page">Resume.json</a>
-              </div>
-            </li>
-          </ul>
-        </aside>
-
       </div>
     </section>
 
@@ -223,22 +185,15 @@
   <dialog id="inquiry-dialog" closedby="any" aria-labelledby="inquiry-dialog-title">
     <div class="dialog-inner">
       <div class="dialog-header">
-        <div>
-          <span class="card-badge">Direct Dispatch • work@cmejo.com</span>
-          <h2 id="inquiry-dialog-title" class="dialog-title">Book an Intro Call or Send an Inquiry</h2>
-        </div>
+        <h2 id="inquiry-dialog-title" class="dialog-title">Book an Intro Call or Send an Inquiry</h2>
         <form method="dialog">
           <button type="submit" value="cancel" class="btn icon-btn" aria-label="Close inquiry dialog">✕</button>
         </form>
       </div>
       <p class="dialog-subtitle">
-        Select how you would like to connect below. Submissions go directly to <strong>work@cmejo.com</strong> with priority response.
+        Select how you would like to connect below. Submissions open directly in your email addressed to <strong>work@cmejo.com</strong> with your details pre-formatted.
       </p>
-      <form id="inquiry-form" data-inquiry-form action="https://formspree.io/f/work@cmejo.com" method="POST" novalidate>
-        <div class="visually-hidden" aria-hidden="true">
-          <label for="inquiry-gotcha">Leave this field blank</label>
-          <input type="text" id="inquiry-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-        </div>
+      <form id="inquiry-form" data-inquiry-form novalidate>
         <input type="hidden" name="social_source" value="direct">
         <input type="hidden" name="traffic_channel" value="direct">
         <input type="hidden" name="utm_campaign" value="(not set)">

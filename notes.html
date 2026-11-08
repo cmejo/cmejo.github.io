@@ -271,22 +271,15 @@
   <dialog id="inquiry-dialog" closedby="any" aria-labelledby="inquiry-dialog-title">
     <div class="dialog-inner">
       <div class="dialog-header">
-        <div>
-          <span class="card-badge">Direct Dispatch • work@cmejo.com</span>
-          <h2 id="inquiry-dialog-title" class="dialog-title">Book an Intro Call or Send an Inquiry</h2>
-        </div>
+        <h2 id="inquiry-dialog-title" class="dialog-title">Book an Intro Call or Send an Inquiry</h2>
         <form method="dialog">
           <button type="submit" value="cancel" class="btn icon-btn" aria-label="Close inquiry dialog">✕</button>
         </form>
       </div>
       <p class="dialog-subtitle">
-        Select how you would like to connect below. Submissions go directly to <strong>work@cmejo.com</strong> with priority response.
+        Select how you would like to connect below. Submissions open directly in your email addressed to <strong>work@cmejo.com</strong> with your details pre-formatted.
       </p>
-      <form id="inquiry-form" data-inquiry-form action="https://formspree.io/f/work@cmejo.com" method="POST" novalidate>
-        <div class="visually-hidden" aria-hidden="true">
-          <label for="inquiry-gotcha">Leave this field blank</label>
-          <input type="text" id="inquiry-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
-        </div>
+      <form id="inquiry-form" data-inquiry-form novalidate>
         <input type="hidden" name="social_source" value="direct">
         <input type="hidden" name="traffic_channel" value="direct">
         <input type="hidden" name="utm_campaign" value="(not set)">
