@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-ga-id="G-XXXXXXXXXX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Experience, Systems &amp; Credentials (Harvard Ph.D., MIT Postdoc) | Christopher Mejo, Ph.D.</title>
+  <meta name="description" content="Career timeline, production ML systems, and academic/security credentials of Christopher Mejo, Ph.D. — Braverock LLC, Cushion Corp, MIT Postdoc under Scott Aaronson, Harvard Physics Ph.D. (at 21), Active TS/SCI.">
+  <meta name="author" content="Christopher Mejo, Ph.D.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://cmejo.com/experience.html">
+
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://cmejo.com/experience.html">
+  <meta property="og:title" content="Experience, Systems &amp; Credentials | Christopher Mejo, Ph.D.">
+  <meta property="og:description" content="15+ years building production LLMs, Hybrid RAG, and RL systems. Harvard Physics Ph.D. (at 21), MIT Postdoc (Aaronson Lab), Active TS/SCI.">
+  <meta property="og:image" content="https://cmejo.com/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="brand" data-track="nav_brand">
+        <span class="brand-monogram" aria-hidden="true">CM</span>
+        <span>Christopher Mejo, Ph.D.</span>
+      </a>
+      <div class="nav-right">
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="index.html" data-track="nav_overview">Overview</a></li>
+            <li><a href="advisory.html" data-track="nav_advisory">Advisory</a></li>
+            <li><a href="experience.html" aria-current="page" data-track="nav_experience">Experience</a></li>
+            <li><a href="notes.html" data-track="nav_notes">Notes</a></li>
+            <li><a href="contact.html" data-track="nav_contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav-controls">
+          <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="Principal / Staff AI Role" data-track="book_call_header">
+            Book Intro Call
+          </button>
+          <a href="christopher-mejo-resume.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener" data-track="resume_view_header">
+            <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9.5 1.5H4a1.5 1.5 0 0 0-1.5 1.5v10A1.5 1.5 0 0 0 4 14.5h8a1.5 1.5 0 0 0 1.5-1.5V5.5L9.5 1.5Z"/><path d="M9.5 1.5v4h4"/></svg>
+            <span>Resume PDF</span>
+          </a>
+          <button type="button" id="theme-toggle" class="btn icon-btn" aria-label="Switch to dark theme">☾</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container">
+
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="status-pill">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Curriculum Vitae • Production Systems • Harvard Ph.D. &amp; MIT Postdoc • Active TS/SCI</span>
+      </div>
+      <h1 id="page-heading">Experience, Systems &amp; Credentials</h1>
+      <p class="page-hero-lead">
+        15+ years leading machine learning research and high-throughput systems engineering across quantitative finance, consumer FinTech, healthcare privacy, and open-source scientific infrastructure.
+      </p>
+      <div class="hero-actions">
+        <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn btn-primary" data-track="resume_view_exp_hero">
+          Download Resume (PDF)
+        </a>
+        <a href="resume.md" class="btn" data-track="resume_md_exp_hero">Resume (Markdown)</a>
+        <a href="resume.json" class="btn" data-track="resume_json_exp_hero">JSON Resume Schema</a>
+        <button type="button" class="btn open-inquiry-btn" data-inquiry-track="Principal / Staff AI Role" data-track="inquire_role_exp_hero">
+          Inquire About Principal / Staff Role →
+        </button>
+      </div>
+    </section>
+
+    <!-- Career Timeline -->
+    <section id="timeline" class="section" aria-labelledby="experience-heading">
+      <div class="section-header">
+        <h2 id="experience-heading" class="section-title">Career &amp; Research Experience</h2>
+        <p class="section-subtitle">15+ years spanning frontier academic research, quantitative finance, and production AI.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="role">
+          <div class="role-header">
+            <div>
+              <h3 class="role-title">Lead AI Scientist &amp; Quantitative Researcher</h3>
+              <span class="role-company">Braverock LLC</span>
+            </div>
+            <span class="role-date">2016 — Present • New York, NY</span>
+          </div>
+          <ul class="role-bullets">
+            <li><strong>Distributed LLM Pretraining:</strong> Directed multi-GPU training and fine-tuning of 7B–14B parameter domain foundation models using DeepSpeed ZeRO-3 and custom CUDA memory-mapped tokenizers (<strong>−38% step latency</strong>).</li>
+            <li><strong>Sub-100ms Document Intelligence:</strong> Engineered transformer and BERT-NER pipelines extracting structured entities and sentiment from 10,000+ daily earnings transcripts, SEC filings, and macro research reports.</li>
+            <li><strong>Multi-Agent RL Execution:</strong> Built deep Q-network (DQN) and actor-critic execution agents achieving a <strong>6.2 Sharpe ratio</strong> (Sortino 8.4, max drawdown &lt;1.9%) over a 24-month continuous live trading window.</li>
+            <li><strong>High-Throughput Market Transformers:</strong> Designed low-latency sequence models ingesting <strong>1B+ quote events/day</strong> for microsecond-scale order-book prediction.</li>
+            <li><strong>Federated &amp; Privacy-Preserving ML:</strong> Architected differentially private (ε = 1.2, δ = 10⁻⁵) federated EfficientNet-B7 computer vision across 4 medical centers (<strong>0.972 ROC-AUC</strong>) and MAML meta-learning drug-response models (+34% R²).</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-header">
+            <div>
+              <h3 class="role-title">Open-Source Developer Fellow (AI Scholar)</h3>
+              <span class="role-company">Google Summer of Code — R Foundation</span>
+            </div>
+            <span class="role-date">Summers 2024 &amp; 2025</span>
+          </div>
+          <ul class="role-bullets">
+            <li><strong>Hybrid RAG Platform:</strong> Solo-architected <a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer" data-track="project_ai_scholar_inline">AI Scholar</a>, indexing 15M+ scientific papers across FAISS dense vectors, BM25 lexical search, and Neo4j citation graphs.</li>
+            <li><strong>Uncertainty-Calibrated Reasoning:</strong> Implemented Monte Carlo Dropout and Evidential Deep Learning for out-of-distribution detection, reducing ungrounded claims by <strong>67%</strong>.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-header">
+            <div>
+              <h3 class="role-title">Senior Machine Learning Engineer</h3>
+              <span class="role-company">Cushion Corp</span>
+            </div>
+            <span class="role-date">2018 — 2020 • San Francisco / Remote</span>
+          </div>
+          <ul class="role-bullets">
+            <li><strong>CushionNLP Negotiation Engine:</strong> Architected and deployed the core BERT-based conversational agent negotiating bank and credit card fees, lifting automated negotiation success by <strong>30%</strong> and saving consumers <strong>$2M+ annually</strong>.</li>
+            <li><strong>Real-Time Financial Categorization:</strong> Built high-throughput classification pipelines processing millions of consumer transactions on AWS SageMaker, Docker, and Kubernetes.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-header">
+            <div>
+              <h3 class="role-title">Postdoctoral Fellow — Quantum Information &amp; Complexity Theory</h3>
+              <span class="role-company">Massachusetts Institute of Technology (MIT)</span>
+            </div>
+            <span class="role-date">2014 — 2016 • Cambridge, MA</span>
+          </div>
+          <ul class="role-bullets">
+            <li><strong>Advisor: Dr. Scott Aaronson (CSAIL).</strong> Conducted foundational research on quantum circuit complexity, boson sampling verification, and quantum-inspired machine learning algorithms.</li>
+            <li>Developed classical simulation algorithms for noisy intermediate-scale quantum (NISQ) circuits and fault-tolerant surface code decoding.</li>
+          </ul>
+        </article>
+
+        <article class="role">
+          <div class="role-header">
+            <div>
+              <h3 class="role-title">Ph.D. Researcher — Quantum Information &amp; Theoretical Physics</h3>
+              <span class="role-company">Harvard University</span>
+            </div>
+            <span class="role-date">2010 — 2014 • Cambridge, MA</span>
+          </div>
+          <ul class="role-bullets">
+            <li>Completed <strong>Ph.D. in Physics at age 21</strong> (Dissertation: <em>Quantum Information, Entanglement Complexity, and Topological Quantum Error Correction</em>).</li>
+            <li>Earned M.A. in Physics (Harvard, 2012) and B.A. in Physics &amp; Mathematics <em>Summa Cum Laude</em> (Harvard, 2010).</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Credentials & Technical Stack -->
+    <section id="credentials" class="section" aria-labelledby="credentials-heading">
+      <div class="two-col">
+        <div>
+          <h2 id="credentials-heading" class="section-title">Education &amp; Clearance</h2>
+          <ul class="cred-list">
+            <li>
+              <div class="cred-head">
+                <strong>Massachusetts Institute of Technology (MIT)</strong>
+                <span>2014 — 2016</span>
+              </div>
+              <div class="cred-sub">Postdoctoral Fellow, Computer Science &amp; AI Lab (CSAIL)</div>
+              <div class="cred-meta">Advisor: Prof. Scott Aaronson • Quantum Complexity &amp; ML</div>
+            </li>
+            <li>
+              <div class="cred-head">
+                <strong>Harvard University</strong>
+                <span>2010 — 2014</span>
+              </div>
+              <div class="cred-sub">Ph.D. &amp; M.A. in Theoretical Physics (Completed at Age 21)</div>
+              <div class="cred-meta">Quantum Information Theory, Complexity &amp; Error Correction</div>
+            </li>
+            <li>
+              <div class="cred-head">
+                <strong>Harvard University</strong>
+                <span>2007 — 2010</span>
+              </div>
+              <div class="cred-sub">B.A. in Physics &amp; Mathematics, <em>Summa Cum Laude</em></div>
+              <div class="cred-meta">Phi Beta Kappa</div>
+            </li>
+            <li>
+              <div class="cred-head">
+                <strong>U.S. Security Clearance</strong>
+                <span class="badge-active">Active</span>
+              </div>
+              <div class="cred-sub">Top Secret / Sensitive Compartmented Information (TS/SCI)</div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="section-title">Technical Stack</h2>
+          <dl class="stack-dl">
+            <div>
+              <dt>Languages &amp; Systems</dt>
+              <dd>Python, C++20, CUDA, Rust, R, SQL, Bash / Linux Kernel Tuning</dd>
+            </div>
+            <div>
+              <dt>LLM &amp; RAG Architecture</dt>
+              <dd>Dense/Sparse/Graph RAG, FAISS, BM25, Neo4j, vLLM, LangGraph, LangChain, Custom Embeddings, BERT-NER, Chain-of-Thought, Uncertainty Quantification (MC Dropout, Evidential DL)</dd>
+            </div>
+            <div>
+              <dt>Deep Learning &amp; RL</dt>
+              <dd>PyTorch, JAX, TensorFlow, Transformers, DQN, Actor-Critic, MAML Meta-Learning, Graph Neural Networks (HAN, GraphSAGE)</dd>
+            </div>
+            <div>
+              <dt>Distributed Systems &amp; MLOps</dt>
+              <dd>DeepSpeed ZeRO-3, Multi-GPU Pretraining, Ray, SLURM, Kubernetes, Docker, Kubeflow, MLflow, Airflow, W&amp;B</dd>
+            </div>
+            <div>
+              <dt>Quantum &amp; Privacy</dt>
+              <dd>Differential Privacy (ε-δ), Federated Learning, Qiskit, Cirq, Surface Codes, VQE</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="section contact-section" aria-labelledby="exp-cta-heading">
+      <div class="contact-box">
+        <div>
+          <h2 id="exp-cta-heading" class="section-title">Hiring for a Principal / Staff AI Role?</h2>
+          <p class="contact-copy">
+            Available for Principal / Staff AI Research Scientist, LLM Systems Architect, and Founding ML Lead roles in New York, NY (In-Person, Hybrid, or Remote).
+          </p>
+        </div>
+        <address class="contact-actions">
+          <button type="button" class="btn btn-primary open-inquiry-btn" data-inquiry-track="Principal / Staff AI Role" data-track="book_call_exp_footer">
+            Discuss a Role / Book Intro Call
+          </button>
+          <a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" class="btn" data-track="resume_view_exp_footer">Download Resume (PDF)</a>
+          <a href="mailto:work@cmejo.com" class="btn" data-track="email_click_exp">work@cmejo.com</a>
+        </address>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Modal Dialog -->
+  <dialog id="inquiry-dialog" closedby="any" aria-labelledby="inquiry-dialog-title">
+    <div class="dialog-inner">
+      <div class="dialog-header">
+        <div>
+          <span class="card-badge">Direct Dispatch • work@cmejo.com</span>
+          <h2 id="inquiry-dialog-title" class="dialog-title">Book an Intro Call or Send an Inquiry</h2>
+        </div>
+        <form method="dialog">
+          <button type="submit" value="cancel" class="btn icon-btn" aria-label="Close inquiry dialog">✕</button>
+        </form>
+      </div>
+      <p class="dialog-subtitle">
+        Select how you would like to connect below. Submissions go directly to <strong>work@cmejo.com</strong> with priority response.
+      </p>
+      <form id="inquiry-form" data-inquiry-form action="https://formspree.io/f/work@cmejo.com" method="POST" novalidate>
+        <div class="visually-hidden" aria-hidden="true">
+          <label for="inquiry-gotcha">Leave this field blank</label>
+          <input type="text" id="inquiry-gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+        <input type="hidden" name="social_source" value="direct">
+        <input type="hidden" name="traffic_channel" value="direct">
+        <input type="hidden" name="utm_campaign" value="(not set)">
+        <input type="hidden" name="referrer_url" value="direct">
+
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Engagement Track (Required)</legend>
+          <div class="radio-grid">
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="15-Min Intro Call" checked required>
+              <span>15-Min Intro Call</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="Principal / Staff AI Role">
+              <span>Principal / Staff AI Role</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="AI Advisory & Architecture Sprint">
+              <span>AI Advisory / Sprint</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="engagement_track" value="Fractional Principal AI Scientist">
+              <span>Fractional / Due Diligence</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="inquiry-name" class="form-label">Full name <span class="req-tag">(Required)</span></label>
+            <input type="text" id="inquiry-name" name="full_name" class="form-input" autocomplete="name" maxlength="100" required autofocus enterkeyhint="next">
+          </div>
+          <div class="form-group">
+            <label for="inquiry-email" class="form-label">Work email <span class="req-tag">(Required)</span></label>
+            <input type="email" id="inquiry-email" name="email" class="form-input" autocomplete="email" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="120" required enterkeyhint="next">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry-org" class="form-label">Company or organization</label>
+          <input type="text" id="inquiry-org" name="organization" class="form-input" autocomplete="organization" maxlength="120" enterkeyhint="next">
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry-message" class="form-label">Context, role details, or preferred times for a 15-min call <span class="req-tag">(Required)</span></label>
+          <textarea id="inquiry-message" name="message" class="form-textarea" rows="3" maxlength="2000" required aria-describedby="inquiry-help" enterkeyhint="send"></textarea>
+          <span id="inquiry-help" class="form-hint">Include a brief note on your system goals, role scope, or 2–3 time windows (EST) for a call.</span>
+        </div>
+
+        <div class="form-error" role="alert" aria-live="polite"></div>
+
+        <div class="dialog-actions">
+          <button type="button" id="dialog-cancel-btn" class="btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Send Request to Christopher →</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Christopher Mejo, Ph.D. • New York, NY</span>
+      <ul class="footer-links" aria-label="Document &amp; Machine-Readable Formats">
+        <li><a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" data-track="resume_view_footer">Resume (PDF)</a></li>
+        <li><a href="resume.md" data-track="resource_resume_md">Resume.md</a></li>
+        <li><a href="resume.json" data-track="resource_resume_json">Resume.json</a></li>
+        <li><a href="llms.txt" data-track="resource_llms_txt">llms.txt</a></li>
+        <li><a href="llms-full.txt" data-track="resource_llms_full">llms-full.txt</a></li>
+        <li><a href="sitemap.xml" data-track="resource_sitemap">Sitemap</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script defer src="script.js"></script>
+</body>
+</html>

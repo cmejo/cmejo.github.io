@@ -1,9 +1,9 @@
 /**
- * Christopher Mejo, Ph.D. — Portfolio Interactions, Modal Inquiry, GA4 & Social Attribution
+ * Christopher Mejo, Ph.D. — Multi-Page Portfolio Interactions, Modal/Inline Inquiry, GA4 & Social Attribution
  */
 
 const ANALYTICS_CONFIG = {
-  // Replace 'G-XXXXXXXXXX' in index.html[data-ga-id] or below with your live GA4 Measurement ID
+  // Replace 'G-XXXXXXXXXX' in [data-ga-id] or below with your live GA4 Measurement ID
   gaMeasurementId: document.documentElement.getAttribute('data-ga-id') || 'G-XXXXXXXXXX'
 };
 
@@ -16,10 +16,11 @@ window.gtag = gtag;
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initEmailCopy();
+  initUrlCopy();
   const attribution = captureTrafficAttribution();
   initAnalytics(attribution);
   initEventTracking(attribution);
-  initInquiryModal(attribution);
+  initInquiryModalAndForms(attribution);
   initDeepLinkNotes(attribution);
 });
 
@@ -68,6 +69,26 @@ function initEmailCopy() {
   });
 }
 
+function initUrlCopy() {
+  document.querySelectorAll('.copy-url').forEach((btn) => {
+    const originalText = btn.textContent;
+    btn.addEventListener('click', async () => {
+      const hash = btn.getAttribute('data-hash') || '';
+      const targetUrl = `${window.location.origin}/notes.html${hash}`;
+      try {
+        await navigator.clipboard.writeText(targetUrl);
+        btn.textContent = 'Link Copied ✓';
+        showToast('Copied direct link to brief ✓');
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      } catch {
+        window.location.hash = hash;
+      }
+    });
+  });
+}
+
 function showToast(msg) {
   const toast = document.getElementById('toast');
   if (!toast) return;
@@ -77,35 +98,38 @@ function showToast(msg) {
 }
 
 /**
- * Native <dialog> Modal for Feature 2 (15-Min Intro Call) & Feature 6 (Project/Role Inquiry)
+ * Native <dialog> Modal & Inline Inquiry Forms (Features 2 & 6 across all pages)
  */
-function initInquiryModal(attribution) {
+function initInquiryModalAndForms(attribution) {
   const dialog = document.getElementById('inquiry-dialog');
-  const form = document.getElementById('inquiry-form');
+  const modalForm = document.getElementById('inquiry-form');
   const cancelBtn = document.getElementById('dialog-cancel-btn');
-  const submitBtn = document.getElementById('inquiry-submit-btn');
-  const errorBox = document.getElementById('form-error-msg');
 
-  if (!dialog || !form) return;
+  // Populate hidden attribution inputs on all inquiry forms (modal + inline on contact.html)
+  document.querySelectorAll('form[data-inquiry-form]').forEach((formEl) => {
+    const setField = (name, val) => {
+      const input = formEl.querySelector(`input[name="${name}"]`);
+      if (input) input.value = val;
+    };
+    setField('social_source', attribution.network);
+    setField('traffic_channel', attribution.channel);
+    setField('utm_campaign', attribution.utm_campaign);
+    setField('referrer_url', attribution.referrer);
 
-  // Populate hidden attribution inputs
-  const setVal = (id, val) => {
-    const el = document.getElementById(id);
-    if (el) el.value = val;
-  };
-  setVal('attr-source', attribution.network);
-  setVal('attr-channel', attribution.channel);
-  setVal('attr-campaign', attribution.utm_campaign);
-  setVal('attr-referrer', attribution.referrer);
+    bindInquiryFormValidationAndSubmit(formEl, dialog, attribution);
+  });
 
-  // Open modal triggers
+  if (!dialog) return;
+
+  // Open modal triggers on any page
   document.querySelectorAll('.open-inquiry-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const track = btn.getAttribute('data-inquiry-track');
-      if (track) {
-        const radio = form.querySelector(`input[name="engagement_track"][value="${CSS.escape(track)}"]`);
+      if (track && modalForm) {
+        const radio = modalForm.querySelector(`input[name="engagement_track"][value="${CSS.escape(track)}"]`);
         if (radio) radio.checked = true;
       }
+      const errorBox = modalForm ? modalForm.querySelector('.form-error') : null;
       if (errorBox) errorBox.textContent = '';
       dialog.showModal();
     });
@@ -147,9 +171,14 @@ function initInquiryModal(attribution) {
       pointerDownOutside = false;
     });
   }
+}
+
+function bindInquiryFormValidationAndSubmit(form, dialog, attribution) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const errorBox = form.querySelector('.form-error');
+  const requiredFields = form.querySelectorAll('input[required], textarea[required]');
 
   // Validation Timing Matrix: validate on blur, reset error state on input
-  const requiredFields = form.querySelectorAll('input[required], textarea[required]');
   requiredFields.forEach((field) => {
     field.addEventListener('blur', () => {
       if (!field.checkValidity()) {
@@ -170,9 +199,9 @@ function initInquiryModal(attribution) {
     e.preventDefault();
 
     // Honeypot check
-    const gotcha = document.getElementById('inquiry-gotcha');
+    const gotcha = form.querySelector('input[name="_gotcha"]');
     if (gotcha && gotcha.value) {
-      dialog.close('honeypot');
+      if (dialog && dialog.open) dialog.close('honeypot');
       return;
     }
 
@@ -208,6 +237,7 @@ function initInquiryModal(attribution) {
     trackEvent('generate_lead', {
       event_category: 'conversion_inquiry',
       engagement_track: track,
+      page_path: window.location.pathname,
       social_source: attribution.network,
       traffic_channel: attribution.channel,
       utm_campaign: attribution.utm_campaign
@@ -236,7 +266,7 @@ function initInquiryModal(attribution) {
         `Email: ${email}\n` +
         `Organization: ${org}\n\n` +
         `Message / Call Times:\n${message}\n\n` +
-        `---\nReferral Source: ${attribution.network} (${attribution.channel})`
+        `---\nReferral Source: ${attribution.network} (${attribution.channel}) | Page: ${window.location.pathname}`
       );
       window.location.href = `mailto:work@cmejo.com?subject=${subject}&body=${body}`;
     }
@@ -246,27 +276,37 @@ function initInquiryModal(attribution) {
       submitBtn.disabled = false;
       submitBtn.textContent = originalBtnText;
     }
-    dialog.close('submitted');
+    if (dialog && dialog.open) {
+      dialog.close('submitted');
+    }
     showToast('Inquiry prepared for Christopher (work@cmejo.com) ✓');
   });
 }
 
 /**
- * Deep-link support & GA4 tracking for Feature 3 (Engineering Notes <details>)
+ * Deep-link support & GA4 tracking for Feature 3 (Engineering Notes)
  */
 function initDeepLinkNotes(attribution) {
-  const openHashTarget = () => {
+  const handleHash = () => {
     const hash = window.location.hash;
     if (!hash || !hash.startsWith('#note-')) return;
+
     const target = document.querySelector(hash);
-    if (target && target.tagName === 'DETAILS') {
-      target.open = true;
+    if (!target && !window.location.pathname.endsWith('notes.html')) {
+      // Forward legacy homepage #note-... links directly to /notes.html#note-...
+      window.location.replace(`notes.html${hash}`);
+      return;
+    }
+    if (target) {
+      if (target.tagName === 'DETAILS') {
+        target.open = true;
+      }
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
-  openHashTarget();
-  window.addEventListener('hashchange', openHashTarget);
+  handleHash();
+  window.addEventListener('hashchange', handleHash);
 
   document.querySelectorAll('.note-card').forEach((details) => {
     details.addEventListener('toggle', () => {
@@ -376,6 +416,7 @@ function initAnalytics(attribution) {
 
     gtag('config', gaId, {
       anonymize_ip: true,
+      page_path: window.location.pathname,
       campaign_source: attribution.utm_source,
       campaign_medium: attribution.utm_medium,
       campaign_name: attribution.utm_campaign
@@ -386,6 +427,7 @@ function initAnalytics(attribution) {
     trackEvent('social_referral_visit', {
       social_network: attribution.network,
       traffic_channel: attribution.channel,
+      page_path: window.location.pathname,
       utm_source: attribution.utm_source,
       utm_medium: attribution.utm_medium,
       utm_campaign: attribution.utm_campaign,
@@ -404,10 +446,12 @@ function initEventTracking(attribution) {
       if (action.startsWith('resume_')) category = 'conversion_resume';
       else if (action.startsWith('email_') || action.startsWith('book_') || action.startsWith('open_form_')) category = 'conversion_contact';
       else if (action.startsWith('social_') || action.startsWith('project_')) category = 'outbound_social';
+      else if (action.startsWith('nav_')) category = 'navigation';
 
       trackEvent(action, {
         event_category: category,
         link_url: href,
+        page_path: window.location.pathname,
         social_source: attribution.network,
         traffic_channel: attribution.channel,
         utm_campaign: attribution.utm_campaign

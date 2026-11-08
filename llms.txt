@@ -1,7 +1,7 @@
 # Christopher Mejo, Ph.D.
 > AI Research Scientist specializing in Large Language Model (LLM) Systems, Retrieval-Augmented Generation (RAG), Agentic Reasoning, and Reinforcement Learning for Sequential Decision-Making.
 
-Christopher Mejo is an AI Research Scientist and Engineer with 15+ years taking machine learning systems from theoretical research prototypes to high-throughput production. He holds a Ph.D. in Physics from Harvard University (quantum information and complexity theory, completed at age 21) and completed postdoctoral training at MIT under Dr. Scott Aaronson. He holds an active Top Secret / Sensitive Compartmented Information (TS/SCI) clearance.
+Christopher Mejo is an AI Research Scientist, Systems Architect, and Technical Advisor with 15+ years taking machine learning systems from theoretical research prototypes to high-throughput production. He holds a Ph.D. in Physics from Harvard University (quantum information and complexity theory, completed at age 21) and completed postdoctoral training at MIT under Dr. Scott Aaronson. He holds an active Top Secret / Sensitive Compartmented Information (TS/SCI) clearance.
 
 ## Key Information
 - Current Title: AI Research Scientist — LLM & Reinforcement Learning Systems
@@ -10,7 +10,7 @@ Christopher Mejo is an AI Research Scientist and Engineer with 15+ years taking 
 - Personal Website: https://cmejo.com
 - GitHub: https://github.com/cmejo
 - LinkedIn: https://linkedin.com/in/cmejo
-- Career Goal: Actively seeking Principal / Staff AI Scientist, LLM Systems Architect, or Founding ML Lead positions at AI infrastructure scale-ups and high-growth AI startups (Remote, Hybrid, or In-Person).
+- Career & Advisory Availability: Actively available for Principal / Staff AI Scientist roles, LLM Systems Architecture sprints (2–4 weeks), Fractional Principal Scientist retainers, and technical due diligence (New York, Hybrid, or Remote).
 
 ## Core Accomplishments & Statistics
 - Solo-architected AI Scholar (github.com/cmejo/AI_Scholar), an open-source hybrid RAG platform indexing 15M+ research papers (Google Summer of Code Fellow 2024 & 2025 with R Foundation).
@@ -21,9 +21,13 @@ Christopher Mejo is an AI Research Scientist and Engineer with 15+ years taking 
 - Federated medical computer vision (EfficientNet-B7) achieving 0.972 ROC-AUC under differential privacy (ε=1.2, δ=10^-5) across 4 healthcare institutions.
 - Active Top Secret / Sensitive Compartmented Information (TS/SCI) security clearance.
 
-## Machine-Readable & Printable Resources
+## Website Pages & Machine-Readable Resources
+- Executive Hub Homepage: https://cmejo.com/
+- AI Advisory & Architecture Sprints: https://cmejo.com/advisory.html
+- Experience, Systems & Credentials: https://cmejo.com/experience.html
+- Engineering Notes & Architecture Briefs: https://cmejo.com/notes.html
+- Contact & Book 15-Min Intro Call: https://cmejo.com/contact.html
 - Full Resume (PDF): https://cmejo.com/christopher-mejo-resume.pdf
 - Full Resume (Markdown): https://cmejo.com/resume.md
 - Full Resume (JSON Resume): https://cmejo.com/resume.json
 - Full Context for LLMs: https://cmejo.com/llms-full.txt
-- Main Web Portfolio: https://cmejo.com/
