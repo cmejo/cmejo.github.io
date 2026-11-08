@@ -1007,7 +1007,8 @@ dialog::backdrop {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin: 1.25rem 0 1.75rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-form-center {
