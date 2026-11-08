@@ -1,8 +1,12 @@
 # Full Profile: Christopher Mejo, Ph.D.
-**AI Research Scientist — LLM & Reinforcement Learning Systems**
+**Principal AI Research Scientist — LLM & Reinforcement Learning Systems**
 - Email: work@cmejo.com
 - Location: New York, NY
 - Website: https://cmejo.com
+- Advisory & Architecture Sprints: https://cmejo.com/advisory.html
+- Experience & Credentials: https://cmejo.com/experience.html
+- Engineering Notes & Architecture Briefs: https://cmejo.com/notes.html
+- Direct Contact & Booking: https://cmejo.com/contact.html
 - GitHub: https://github.com/cmejo
 - LinkedIn: https://linkedin.com/in/cmejo
 - Security Clearance: Active Top Secret / Sensitive Compartmented Information (TS/SCI)
@@ -10,9 +14,23 @@
 ---
 
 ## Executive Summary
-AI research scientist and engineer with 15+ years taking machine learning systems from research prototype to production, holding a Ph.D. in Physics from Harvard (quantum information and complexity theory, completed at age 21) and postdoctoral training at MIT under Dr. Scott Aaronson.
-Core focus: Large Language Model (LLM) systems — retrieval-augmented generation, fine-tuning, agentic reasoning — and reinforcement learning for sequential decision-making.
-Solo-architected AI Scholar, an open-source RAG platform indexing 15M+ research papers (Google Summer of Code Fellow, 2024 and 2025). Shipped production LLM and RL systems in finance and a federated computer-vision system in healthcare. Comfortable owning systems end-to-end in small teams.
+AI research scientist, systems architect, and executive advisor with 15+ years taking machine learning systems from mathematical prototype to high-throughput production, holding a Ph.D. in Physics from Harvard (quantum information and complexity theory, completed at age 21) and postdoctoral training in theoretical computer science at MIT under Dr. Scott Aaronson.
+Core focus: Large Language Model (LLM) systems — hybrid retrieval-augmented generation, distributed multi-GPU pretraining, custom CUDA kernels, agentic reasoning — and reinforcement learning for sequential decision-making.
+Solo-architected AI Scholar, an open-source RAG platform indexing 15M+ research papers (Google Summer of Code Fellow, 2024 and 2025). Shipped production LLM and RL systems in finance and a federated computer-vision system in healthcare.
+
+---
+
+## AI Advisory & Architecture Sprints (https://cmejo.com/advisory.html)
+1. **Production RAG & Agentic Systems (2–4 Week Sprint)**: Hybrid dense/sparse/graph retrieval (FAISS, BM25, Neo4j), MAML adaptive routing (+40% NDCG@10), automated citation grounding evals, and calibrated OOD abstention guardrails (−67% hallucinations).
+2. **Custom LLMs & Latency Engineering**: 7B–14B domain foundation model pretraining & fine-tuning (DeepSpeed ZeRO-3), custom memory-mapped CUDA BPE tokenizers (−38% wall-clock step latency), and sub-100ms p99 inference optimization.
+3. **Fractional Principal Scientist & Technical Due Diligence**: Architecture governance, founding AI/ML interview loop calibration, venture/PE M&A technical due diligence, and cleared national-security AI advisory (Active TS/SCI).
+
+---
+
+## Engineering Notes & Architecture Briefs (https://cmejo.com/notes.html)
+- **Brief 01**: Cutting Enterprise Hallucinations by 67% with Hybrid Dense-Sparse-Graph RAG (`https://cmejo.com/notes.html#note-hybrid-rag`)
+- **Brief 02**: Sub-100ms Domain LLM Inference via Custom CUDA Kernels & BPE Tokenizers (`https://cmejo.com/notes.html#note-cuda-tokenizers`)
+- **Brief 03**: Epistemic Uncertainty Quantification as a Production Guardrail for Clinical & Enterprise AI (`https://cmejo.com/notes.html#note-epistemic-uncertainty`)
 
 ---
 
@@ -26,7 +44,6 @@ Solo-architected AI Scholar, an open-source RAG platform indexing 15M+ research 
 - Implemented dynamic Heterogeneous Graph Attention Networks (HAN) modeling multi-asset cross-correlations across tick, intraday, and multi-week horizons, improving regime-shift detection accuracy 19%.
 - Designed and deployed an enterprise crypto basis-yield strategy delivering an out-of-sample, beta-neutral Sharpe ratio of 2.63 on $60M+ in institutional AUM.
 - Developed proprietary quantitative strategies achieving a 6.2 Sharpe ratio (Sortino 8.4, max drawdown <1.9%) over a continuous 24-month live deployment window, executing billions of dollars in trading volume across holding periods from sub-second to multi-month.
-- Strategy scope spanned quantitative multi-exchange, multi-asset market making; treasury management; regime-aware risk-managed momentum; and multi- and single-asset statistical arbitrage / structural mean-reversion market-neutral strategies.
 
 ### Senior Data Scientist — Cushion AI (Apr 2021 – Oct 2021)
 - Built CushionNLP, a proprietary BERT-based transformer system for bank-fee negotiation, driving a 30% increase in successful negotiations and $2M+ in additional annual customer savings.
@@ -68,16 +85,14 @@ Solo-architected AI Scholar, an open-source RAG platform indexing 15M+ research 
 ---
 
 ## Technical Skills
-- **Languages**: Python, C, C++, R, Assembly, Java, JavaScript
+- **Languages**: Python, C, C++, CUDA, R, Assembly, Java, JavaScript
 - **ML / Deep Learning**: PyTorch, TensorFlow, JAX, Transformers, Reinforcement Learning (DQN, actor-critic, MAML)
 - **LLM / RAG**: Retrieval-augmented generation (dense, sparse, and graph-based retrieval), FAISS, BM25, Neo4j knowledge graphs, custom embedding models, vector databases, LangChain, LangGraph, vLLM, named entity recognition (spaCy, BERT-NER), chain-of-thought and agentic reasoning, uncertainty quantification (Monte Carlo dropout, evidential deep learning), retrieval evaluation (NDCG, MRR)
-- **MLOps**: MLflow, Kubeflow, Apache Airflow, Docker, Kubernetes, Ray, Weights & Biases
-- **Quantum Computing**: Qiskit, Cirq
-- **Distributed / HPC**: SLURM, multi-GPU distributed training
+- **MLOps**: DeepSpeed ZeRO-3, MLflow, Kubeflow, Apache Airflow, Docker, Kubernetes, Ray, Weights & Biases, SLURM
 
 ---
 
 ## Target Roles & Value Offered
-- Roles: Principal / Staff AI Scientist, Lead LLM Systems Researcher, Quant ML Researcher, Head of AI Research.
+- Roles: Principal / Staff AI Scientist, Lead LLM Systems Researcher, Quant ML Researcher, Head of AI Research, Fractional Principal AI Scientist.
 - Key Strengths: Bridging cutting-edge foundational theory (Harvard PhD / MIT CS postdoc) with battle-tested low-latency production engineering (1B+ events/day, microsecond execution, distributed GPU training, multi-modal enterprise systems).
 - Willing to relocate / remote / hybrid in New York, NY or major tech hubs.

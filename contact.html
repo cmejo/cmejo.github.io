@@ -27,6 +27,32 @@
   <meta property="og:description" content="Direct dispatch to work@cmejo.com for Principal/Staff AI roles, architecture sprints, and fractional advisory.">
   <meta property="og:image" content="https://cmejo.com/apple-touch-icon.png">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Overview", "item": "https://cmejo.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact & Book a 15-Min Intro Call", "item": "https://cmejo.com/contact.html" }
+        ]
+      },
+      {
+        "@type": "ContactPage",
+        "name": "Contact Christopher Mejo, Ph.D.",
+        "url": "https://cmejo.com/contact.html",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Christopher Mejo, Ph.D.",
+          "email": "mailto:work@cmejo.com",
+          "url": "https://cmejo.com/"
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,10 +60,7 @@
 
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="brand" data-track="nav_brand">
-        <span class="brand-monogram" aria-hidden="true">CM</span>
-        <span>Christopher Mejo, Ph.D.</span>
-      </a>
+      <a href="index.html" class="brand" data-track="nav_brand">Christopher Mejo, Ph.D.</a>
       <div class="nav-right">
         <nav aria-label="Primary">
           <ul class="nav-links">
@@ -156,7 +179,7 @@
             Prefer direct email or reviewing machine-readable credentials first? Use any of the channels below.
           </p>
 
-          <ul class="direct-channels-list">
+          <ul class="direct-channels-list" role="list">
             <li>
               <span class="channel-label">Primary Work &amp; Advisory Email</span>
               <div class="hero-actions">
@@ -278,7 +301,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 Christopher Mejo, Ph.D. • New York, NY</span>
-      <ul class="footer-links" aria-label="Document &amp; Machine-Readable Formats">
+      <ul class="footer-links" role="list" aria-label="Document &amp; Machine-Readable Formats">
         <li><a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" data-track="resume_view_footer">Resume (PDF)</a></li>
         <li><a href="resume.md" data-track="resource_resume_md">Resume.md</a></li>
         <li><a href="resume.json" data-track="resource_resume_json">Resume.json</a></li>

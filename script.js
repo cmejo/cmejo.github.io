@@ -215,7 +215,7 @@ function bindInquiryFormValidationAndSubmit(form, dialog, attribution) {
         }
       });
       if (errorBox) {
-        errorBox.textContent = 'Please complete all required fields (Name, valid Work Email, and Context).';
+        errorBox.textContent = '⚠ Please complete all required fields (Name, valid Work Email, and Context).';
       }
       if (firstInvalid) firstInvalid.focus();
       return;

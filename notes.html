@@ -30,24 +30,43 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Engineering Notes & Architecture Briefs — Christopher Mejo, Ph.D.",
-    "url": "https://cmejo.com/notes.html",
-    "hasPart": [
+    "@graph": [
       {
-        "@type": "TechArticle",
-        "headline": "Cutting Enterprise Hallucinations by 67% with Hybrid Dense-Sparse-Graph RAG",
-        "url": "https://cmejo.com/notes.html#note-hybrid-rag"
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Overview", "item": "https://cmejo.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Engineering Notes & Architecture Briefs", "item": "https://cmejo.com/notes.html" }
+        ]
       },
       {
-        "@type": "TechArticle",
-        "headline": "Sub-100ms Domain LLM Inference via Custom CUDA Kernels & BPE Tokenizers",
-        "url": "https://cmejo.com/notes.html#note-cuda-tokenizers"
-      },
-      {
-        "@type": "TechArticle",
-        "headline": "Epistemic Uncertainty Quantification as a Production Guardrail for Clinical & Enterprise AI",
-        "url": "https://cmejo.com/notes.html#note-epistemic-uncertainty"
+        "@type": "CollectionPage",
+        "name": "Engineering Notes & Architecture Briefs — Christopher Mejo, Ph.D.",
+        "url": "https://cmejo.com/notes.html",
+        "author": {
+          "@type": "Person",
+          "name": "Christopher Mejo, Ph.D.",
+          "url": "https://cmejo.com/"
+        },
+        "hasPart": [
+          {
+            "@type": "TechArticle",
+            "headline": "Cutting Enterprise Hallucinations by 67% with Hybrid Dense-Sparse-Graph RAG",
+            "url": "https://cmejo.com/notes.html#note-hybrid-rag",
+            "author": { "@type": "Person", "name": "Christopher Mejo, Ph.D." }
+          },
+          {
+            "@type": "TechArticle",
+            "headline": "Sub-100ms Domain LLM Inference via Custom CUDA Kernels & BPE Tokenizers",
+            "url": "https://cmejo.com/notes.html#note-cuda-tokenizers",
+            "author": { "@type": "Person", "name": "Christopher Mejo, Ph.D." }
+          },
+          {
+            "@type": "TechArticle",
+            "headline": "Epistemic Uncertainty Quantification as a Production Guardrail for Clinical & Enterprise AI",
+            "url": "https://cmejo.com/notes.html#note-epistemic-uncertainty",
+            "author": { "@type": "Person", "name": "Christopher Mejo, Ph.D." }
+          }
+        ]
       }
     ]
   }
@@ -60,10 +79,7 @@
 
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="brand" data-track="nav_brand">
-        <span class="brand-monogram" aria-hidden="true">CM</span>
-        <span>Christopher Mejo, Ph.D.</span>
-      </a>
+      <a href="index.html" class="brand" data-track="nav_brand">Christopher Mejo, Ph.D.</a>
       <div class="nav-right">
         <nav aria-label="Primary">
           <ul class="nav-links">
@@ -142,19 +158,19 @@
               <strong>The Tri-Modal Architecture (<a href="https://github.com/cmejo/AI_Scholar" target="_blank" rel="noopener noreferrer">AI Scholar</a>):</strong> Across 15M+ scientific papers, I implemented a parallel three-stage retrieval and calibration pipeline:
               (1) <strong>Dense semantic recall</strong> via HNSW-indexed FAISS embeddings;
               (2) <strong>Exact lexical recall</strong> via BM25 with domain-tuned stemming; and
-              (3) <strong>2-hop citation &amp; entity subgraph expansion</strong> in Neo4j.
-              Candidates are merged via Reciprocal Rank Fusion (RRF) and scored by a cross-encoder reranker before entering the generator context.
+              (3) <strong>2-hop citation &amp; entity subgraph expansion</strong> in Neo4j constructed via spaCy and BERT-NER relation extraction.
+              Candidates are merged via Reciprocal Rank Fusion (RRF) and routed by a MAML meta-learned adaptive retrieval policy (+40% NDCG@10).
             </p>
             <p>
               <strong>Epistemic Abstention Guardrail:</strong> Rather than forcing generation when retrieval support is weak, the synthesis head runs Monte Carlo Dropout and Evidential Deep Learning over token-level Dirichlet concentration parameters. When epistemic uncertainty exceeds a calibrated threshold, the agent abstains or triggers a targeted follow-up query—cutting ungrounded claims by <strong>67%</strong> on multi-hop synthesis benchmarks.
             </p>
           </div>
           <footer class="article-footer">
-            <ul class="tag-list" aria-label="Brief 01 Technologies">
+            <ul class="tag-list" role="list" aria-label="Brief 01 Technologies">
               <li>FAISS (HNSW)</li>
               <li>BM25</li>
               <li>Neo4j</li>
-              <li>Reciprocal Rank Fusion</li>
+              <li>MAML Router</li>
               <li>Evidential DL</li>
             </ul>
             <div class="nav-controls">
@@ -178,15 +194,15 @@
               <strong>Custom Memory-Mapped CUDA Tokenization &amp; ZeRO-3:</strong> For our 7B–14B parameter institutional foundation models at Braverock LLC, I trained domain-aligned BPE vocabularies and wrote zero-copy, memory-mapped C++/CUDA pre-tokenization pipelines paired with DeepSpeed ZeRO-3 stage-partitioned optimizer states.
             </p>
             <p>
-              <strong>Production Impact:</strong> Compressing effective sequence lengths by 29% and eliminating host-to-device serialization overhead reduced multi-GPU wall-clock step latency by <strong>38%</strong> during training and enabled deterministic <strong>sub-100ms p99 inference</strong> across 10,000+ daily institutional filings and macro reports.
+              <strong>Production Impact:</strong> Compressing effective sequence lengths by 29% and eliminating host-to-device serialization overhead reduced multi-GPU wall-clock step latency by <strong>38%</strong> during training and enabled deterministic <strong>sub-100ms p99 inference</strong> across 10M+ indexed financial filings, earnings calls, and macro research reports.
             </p>
           </div>
           <footer class="article-footer">
-            <ul class="tag-list" aria-label="Brief 02 Technologies">
+            <ul class="tag-list" role="list" aria-label="Brief 02 Technologies">
               <li>DeepSpeed ZeRO-3</li>
               <li>Custom CUDA Kernels</li>
               <li>BPE Tokenizers</li>
-              <li>C++20</li>
+              <li>C++</li>
               <li>vLLM</li>
             </ul>
             <div class="nav-controls">
@@ -207,14 +223,14 @@
               <strong>Why Softmax Probabilities Lie:</strong> Raw softmax logits measure relative class separation within the training distribution, not model familiarity. Out-of-distribution (OOD) inputs routinely produce 0.99+ softmax confidence, causing catastrophic silent failures in clinical diagnostics, autonomous trading execution, and enterprise compliance pipelines.
             </p>
             <p>
-              <strong>Decomposing Aleatoric vs. Epistemic Uncertainty:</strong> In both federated medical computer vision (EfficientNet-B7 across 4 hospitals under (ε = 1.2, δ = 10⁻⁵) differential privacy) and live RL trading agents, I separate irreducible data noise (aleatoric) from model ignorance (epistemic) using Evidential Deep Learning and stochastic weight/dropout ensembles.
+              <strong>Decomposing Aleatoric vs. Epistemic Uncertainty:</strong> In both federated medical computer vision at RapidRads AI (EfficientNet-B7 across 4 hospitals under (ε = 1.2, δ = 10⁻⁵) differential privacy) and live RL trading agents at Braverock LLC, I separate irreducible data noise (aleatoric) from model ignorance (epistemic) using Evidential Deep Learning, Grad-CAM attribution, and stochastic weight/dropout ensembles.
             </p>
             <p>
-              <strong>Result:</strong> Achieving <strong>0.972 ROC-AUC</strong> in cross-institutional clinical imaging while automatically routing high-epistemic-uncertainty cases to human clinicians, and maintaining a <strong>&lt;1.9% maximum drawdown</strong> over 24 months of live quantitative execution.
+              <strong>Result:</strong> Achieving <strong>0.972 ROC-AUC</strong> (96.5% sensitivity, 98.2% specificity) in cross-institutional clinical imaging while automatically routing high-epistemic-uncertainty cases to human clinicians, and maintaining a <strong>&lt;1.9% maximum drawdown</strong> (6.2 Sharpe ratio) over 24 months of live quantitative execution.
             </p>
           </div>
           <footer class="article-footer">
-            <ul class="tag-list" aria-label="Brief 03 Technologies">
+            <ul class="tag-list" role="list" aria-label="Brief 03 Technologies">
               <li>Evidential Deep Learning</li>
               <li>MC Dropout</li>
               <li>Differential Privacy (ε-δ)</li>
@@ -333,7 +349,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 Christopher Mejo, Ph.D. • New York, NY</span>
-      <ul class="footer-links" aria-label="Document &amp; Machine-Readable Formats">
+      <ul class="footer-links" role="list" aria-label="Document &amp; Machine-Readable Formats">
         <li><a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" data-track="resume_view_footer">Resume (PDF)</a></li>
         <li><a href="resume.md" data-track="resource_resume_md">Resume.md</a></li>
         <li><a href="resume.json" data-track="resource_resume_json">Resume.json</a></li>

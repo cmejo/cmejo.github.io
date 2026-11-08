@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark">
 
   <title>AI Advisory, Custom LLM Sprints &amp; Fractional Principal Scientist | Christopher Mejo, Ph.D.</title>
-  <meta name="description" content="Enterprise AI Advisory & Systems Architecture by Christopher Mejo, Ph.D. (Harvard Ph.D., MIT Postdoc). 2–4 week Production RAG sprints, custom CUDA & LLM latency optimization, and Fractional Principal AI Scientist retainers.">
+  <meta name="description" content="Enterprise AI Advisory & Systems Architecture by Christopher Mejo, Ph.D. (Harvard Ph.D. at 21, MIT Postdoc under Scott Aaronson, Active TS/SCI). 2–4 week Production RAG sprints, custom CUDA & LLM latency optimization, and Fractional Principal AI Scientist retainers.">
   <meta name="author" content="Christopher Mejo, Ph.D.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#ffffff">
@@ -30,16 +30,32 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://cmejo.com/advisory.html#service",
-    "name": "Christopher Mejo, Ph.D. — AI Advisory & Systems Architecture",
-    "url": "https://cmejo.com/advisory.html",
-    "email": "mailto:work@cmejo.com",
-    "areaServed": "Global",
-    "serviceType": [
-      "Production RAG & Agentic Systems Architecture Sprint",
-      "Custom LLMs, CUDA Kernels & Inference Latency Optimization",
-      "Fractional Principal AI Scientist & Technical Due Diligence"
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Overview", "item": "https://cmejo.com/" },
+          { "@type": "ListItem", "position": 2, "name": "AI Advisory & Architecture Sprints", "item": "https://cmejo.com/advisory.html" }
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://cmejo.com/advisory.html#service",
+        "name": "Christopher Mejo, Ph.D. — AI Advisory & Systems Architecture",
+        "url": "https://cmejo.com/advisory.html",
+        "email": "mailto:work@cmejo.com",
+        "areaServed": "Global",
+        "provider": {
+          "@type": "Person",
+          "name": "Christopher Mejo, Ph.D.",
+          "url": "https://cmejo.com/"
+        },
+        "serviceType": [
+          "Production RAG & Agentic Systems Architecture Sprint",
+          "Custom LLMs, CUDA Kernels & Inference Latency Optimization",
+          "Fractional Principal AI Scientist & Technical Due Diligence"
+        ]
+      }
     ]
   }
   </script>
@@ -51,10 +67,7 @@
 
   <header class="site-header">
     <div class="container nav-bar">
-      <a href="index.html" class="brand" data-track="nav_brand">
-        <span class="brand-monogram" aria-hidden="true">CM</span>
-        <span>Christopher Mejo, Ph.D.</span>
-      </a>
+      <a href="index.html" class="brand" data-track="nav_brand">Christopher Mejo, Ph.D.</a>
       <div class="nav-right">
         <nav aria-label="Primary">
           <ul class="nav-links">
@@ -88,7 +101,7 @@
       </div>
       <h1 id="page-heading">AI Advisory &amp; Systems Architecture</h1>
       <p class="page-hero-lead">
-        High-leverage architecture sprints and fractional Principal Scientist leadership for engineering orgs, AI scale-ups, and institutional investors transitioning from fragile LLM wrappers to deterministic, low-latency production systems.
+        High-leverage architecture sprints and fractional Principal Scientist leadership for engineering organizations, AI scale-ups, and institutional investors transitioning from brittle LLM wrappers to deterministic, low-latency production systems.
       </p>
       <div class="hero-actions">
         <button type="button" class="btn btn-primary open-inquiry-btn" data-inquiry-track="15-Min Intro Call" data-track="book_call_advisory_hero">
@@ -102,7 +115,7 @@
     <section class="section" aria-labelledby="tracks-heading">
       <div class="section-header">
         <h2 id="tracks-heading" class="section-title">Engagement Scopes &amp; Deliverables</h2>
-        <p class="section-subtitle">Fixed-scope technical sprints or ongoing fractional retainers tailored to your engineering roadmap.</p>
+        <p class="section-subtitle">Fixed-scope technical sprints or ongoing fractional retainers tailored to your production roadmap.</p>
       </div>
 
       <div class="cards-grid cards-grid-3">
@@ -113,13 +126,13 @@
             </div>
             <h3>Production RAG &amp; Agentic Systems</h3>
             <p>
-              Replace brittle single-vector retrieval with hybrid dense/sparse/graph architectures (FAISS, BM25, Neo4j), multi-agent orchestration, and epistemic uncertainty guardrails that eliminate hallucinations in regulated domains.
+              Replace fragile single-vector retrieval with hybrid dense/sparse/graph architectures (FAISS, BM25, Neo4j), multi-agent orchestration, and epistemic uncertainty guardrails that eliminate ungrounded claims in regulated domains.
             </p>
-            <ul class="advisory-outcomes">
-              <li>Hybrid retrieval &amp; reciprocal reranking pipeline</li>
+            <ul class="advisory-outcomes" role="list">
+              <li>Hybrid retrieval &amp; reciprocal reranking pipeline (+40% NDCG@10)</li>
               <li>Automated hallucination &amp; citation grounding evals</li>
-              <li>calibrated OOD abstention thresholds (MC Dropout / Evidential DL)</li>
-              <li>Multi-step LangGraph / custom agent workflows</li>
+              <li>Calibrated OOD abstention thresholds (MC Dropout / Evidential DL)</li>
+              <li>Multi-step LangGraph / custom agentic reasoning workflows</li>
             </ul>
             <div class="card-footer">
               <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="AI Advisory & Architecture Sprint" data-track="inquire_advisory_rag">
@@ -138,11 +151,11 @@
             <p>
               Cut GPU compute spend and inference tail latency via domain-specific BPE tokenizers, custom CUDA kernels, DeepSpeed ZeRO-3 distributed training, and quantized vLLM serving pipelines.
             </p>
-            <ul class="advisory-outcomes">
+            <ul class="advisory-outcomes" role="list">
               <li>7B–14B domain model fine-tuning &amp; continual pretraining</li>
-              <li>Custom domain BPE tokenizers (−30% sequence fragmentation)</li>
-              <li>Sub-100ms p99 inference optimization &amp; batching</li>
-              <li>Multi-GPU cluster &amp; CUDA kernel bottleneck profiling</li>
+              <li>Custom memory-mapped CUDA BPE tokenizers (−38% step latency)</li>
+              <li>Sub-100ms p99 inference optimization &amp; dynamic batching</li>
+              <li>Multi-GPU cluster &amp; kernel bottleneck profiling</li>
             </ul>
             <div class="card-footer">
               <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="AI Advisory & Architecture Sprint" data-track="inquire_advisory_llm">
@@ -159,13 +172,13 @@
             </div>
             <h3>Fractional Principal Scientist &amp; Due Diligence</h3>
             <p>
-              Hands-on technical direction for founders, VPs of Engineering, and venture/PE investment committees evaluating AI defensibility, system scalability, and core ML research hires.
+              Hands-on technical direction for founders, VPs of Engineering, and venture/PE investment committees evaluating AI defensibility, system scalability, and founding research hires.
             </p>
-            <ul class="advisory-outcomes">
-              <li>Architecture &amp; ML roadmap design reviews</li>
+            <ul class="advisory-outcomes" role="list">
+              <li>Architecture &amp; ML roadmap governance reviews</li>
               <li>Founding AI/ML team technical interview calibration</li>
               <li>M&amp;A and Venture/PE technical due diligence audits</li>
-              <li>Cleared defense / national-security AI advisory (Active TS/SCI)</li>
+              <li>Cleared defense &amp; national-security AI advisory (Active TS/SCI)</li>
             </ul>
             <div class="card-footer">
               <button type="button" class="btn btn-sm open-inquiry-btn" data-inquiry-track="Fractional Principal AI Scientist" data-track="inquire_advisory_fractional">
@@ -189,21 +202,21 @@
           <span class="process-step-num">Step 01 • Day 1</span>
           <h3>15-Min Architecture Triage</h3>
           <p>
-            We review your current retrieval accuracy, inference latency bottlenecks, or hiring/diligence objectives and determine immediately if a sprint or retainer is the right fit.
+            We review your current retrieval accuracy, inference latency bottlenecks, or hiring/diligence objectives and determine immediately whether a focused sprint or fractional retainer is the highest-ROI fit.
           </p>
         </div>
         <div class="process-card">
-          <span class="process-step-num">Step 02 • Week 1–3</span>
+          <span class="process-step-num">Step 02 • Weeks 1–3</span>
           <h3>Hands-On Architecture &amp; Benchmarks</h3>
           <p>
-            Direct code, evaluation harnesses, and architecture blueprints delivered inside your repository and cloud environment alongside your senior engineers.
+            Production code, evaluation harnesses, and architecture blueprints delivered directly inside your repository and cloud environment alongside your senior engineers.
           </p>
         </div>
         <div class="process-card">
           <span class="process-step-num">Step 03 • Handoff</span>
           <h3>Production Transfer &amp; Playbook</h3>
           <p>
-            Complete production handoff with reproducible benchmark suites, monitoring dashboards, and executive documentation so your team owns the system long-term.
+            Complete production handoff with reproducible benchmark suites, telemetry dashboards, and executive documentation so your team owns and scales the system long-term.
           </p>
         </div>
       </div>
@@ -213,7 +226,7 @@
     <section class="section contact-section" aria-labelledby="advisory-cta-heading">
       <div class="contact-box">
         <div>
-          <h2 id="advisory-cta-heading" class="section-title">Discuss Your Architecture or Role</h2>
+          <h2 id="advisory-cta-heading" class="section-title">Discuss Your Architecture or Advisory Scope</h2>
           <p class="contact-copy">
             Book a 15-minute intro call or send your system specifications directly to <strong>work@cmejo.com</strong>.
           </p>
@@ -314,7 +327,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 Christopher Mejo, Ph.D. • New York, NY</span>
-      <ul class="footer-links" aria-label="Document &amp; Machine-Readable Formats">
+      <ul class="footer-links" role="list" aria-label="Document &amp; Machine-Readable Formats">
         <li><a href="christopher-mejo-resume.pdf" target="_blank" rel="noopener" data-track="resume_view_footer">Resume (PDF)</a></li>
         <li><a href="resume.md" data-track="resource_resume_md">Resume.md</a></li>
         <li><a href="resume.json" data-track="resource_resume_json">Resume.json</a></li>
