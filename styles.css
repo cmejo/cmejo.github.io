@@ -197,31 +197,49 @@ a:hover {
 
 .nav-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 3.85rem;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.75rem 0 0.6rem;
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 800;
-  font-size: 1.25rem;
-  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
-  letter-spacing: -0.025em;
+  line-height: 1.25;
 }
 
-.brand:hover {
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.2;
+  transition: color 0.15s ease;
+}
+
+.brand:hover .brand-name {
   color: var(--accent);
+}
+
+.brand-title {
+  font-size: 0.88rem;
+  font-weight: 550;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-top: 0.12rem;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1.15rem;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .nav-links {
