@@ -948,7 +948,7 @@ dialog::backdrop {
 
 .form-textarea {
   resize: vertical;
-  min-height: 5.5rem;
+  min-height: 10.5rem;
 }
 
 .form-input:invalid:user-invalid,
