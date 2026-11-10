@@ -1,53 +1,88 @@
 /* ==========================================================================
    Christopher Mejo, Ph.D. — Institutional Luxury Technical Portfolio
-   Default: Crisp White Editorial Theme | Optional: Deep Slate Dark Theme
+   Design System: "Quiet Luxury & High-Performance Engineering"
+   HiDPI (Retina 2x/3x, 4K/5K) & Multi-OS Responsive Standards
    ========================================================================== */
 
 :root {
   color-scheme: light dark;
 
-  /* Default: Crisp White / Institutional Luxury Light Theme */
-  --bg: #ffffff;
-  --bg-surface: #ffffff;
-  --bg-elevated: #f8fafc;
-  --border: #e2e8f0;
-  --border-input: #cbd5e1;
-  --border-strong: #0369a1;
+  /* Typography Stacks: Native OS Optical Tracking & Subpixel Tuning */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI Variable Text", "Segoe UI", system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", "Fira Code", Menlo, Monaco, Consolas, monospace;
 
-  --text: #0f172a;
+  /* Layout & Geometry */
+  --max-w: 60rem;
+  --radius: 0.625rem;
+  --radius-sm: 0.375rem;
+  --radius-pill: 9999px;
+
+  /* Default Light Theme: Gallery Alabaster & Sapphire Obsidian */
+  --bg: #fbfbfd;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f4f6fa;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-input: rgba(15, 23, 42, 0.16);
+  --border-strong: rgba(2, 132, 199, 0.38);
+
+  --text: #0b0f19;
   --text-secondary: #334155;
   --text-muted: #64748b;
 
-  --accent: #0369a1;
-  --accent-hover: #075985;
-  --accent-subtle: rgba(3, 105, 161, 0.06);
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-subtle: rgba(2, 132, 199, 0.07);
   --btn-primary-text: #ffffff;
-  --status-green: #059669;
-  --error-red: #dc2626;
-  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-card-hover: 0 4px 12px rgba(15, 23, 42, 0.08);
 
-  --max-w: 58rem;
-  --radius: 0.5rem;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  --status-green: #059669;
+  --status-green-glow: rgba(5, 150, 105, 0.35);
+  --error-red: #dc2626;
+
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 14px rgba(15, 23, 42, 0.03);
+  --shadow-card-hover: 0 10px 28px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
+  --highlight-inset: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
 
   accent-color: var(--accent);
+}
+
+/* Wide-Color-Gamut OKLCH Architecture (Supported on Chrome 111+, Safari 15.4+, Firefox 113+) */
+@supports (color: oklch(98% 0.003 240)) {
+  :root {
+    --bg: oklch(98.8% 0.003 240);
+    --bg-surface: oklch(100% 0 0);
+    --bg-elevated: oklch(96.5% 0.006 240);
+    --border: oklch(20% 0.02 260 / 8%);
+    --border-input: oklch(20% 0.02 260 / 16%);
+    --border-strong: oklch(55% 0.19 240 / 38%);
+
+    --text: oklch(16% 0.025 260);
+    --text-secondary: oklch(38% 0.025 255);
+    --text-muted: oklch(56% 0.02 250);
+
+    --accent: oklch(55% 0.19 240);
+    --accent-hover: oklch(48% 0.20 242);
+    --accent-subtle: oklch(55% 0.19 240 / 7%);
+
+    --shadow-card: 0 1px 3px oklch(0% 0 0 / 4%), 0 4px 14px oklch(0% 0 0 / 3%);
+    --shadow-card-hover: 0 10px 28px oklch(0% 0 0 / 8%), 0 2px 8px oklch(0% 0 0 / 4%);
+    --highlight-inset: inset 0 1px 0 0 oklch(100% 0 0 / 75%);
+  }
 }
 
 [data-theme="light"] {
   color-scheme: light;
 }
 
+/* Dark Theme: Obsidian Executive & Electric Cyan */
 [data-theme="dark"] {
   color-scheme: dark;
 
   --bg: #080c14;
-  --bg-surface: #0f1623;
-  --bg-elevated: #162032;
-  --border: rgba(148, 163, 184, 0.16);
-  --border-input: rgba(148, 163, 184, 0.38);
-  --border-strong: rgba(56, 189, 248, 0.5);
+  --bg-surface: #0e1523;
+  --bg-elevated: #151f33;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-input: rgba(255, 255, 255, 0.18);
+  --border-strong: rgba(56, 189, 248, 0.45);
 
   --text: #f8fafc;
   --text-secondary: #cbd5e1;
@@ -55,12 +90,39 @@
 
   --accent: #38bdf8;
   --accent-hover: #7dd3fc;
-  --accent-subtle: rgba(56, 189, 248, 0.09);
-  --btn-primary-text: #060911;
+  --accent-subtle: rgba(56, 189, 248, 0.1);
+  --btn-primary-text: #050811;
+
   --status-green: #10b981;
+  --status-green-glow: rgba(16, 185, 129, 0.45);
   --error-red: #f87171;
-  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.25);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 12px 36px rgba(0, 0, 0, 0.65), 0 2px 8px rgba(0, 0, 0, 0.35);
+  --highlight-inset: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+@supports (color: oklch(13% 0.015 250)) {
+  [data-theme="dark"] {
+    --bg: oklch(13.2% 0.015 250);
+    --bg-surface: oklch(16.5% 0.018 250);
+    --bg-elevated: oklch(21% 0.022 250);
+    --border: oklch(100% 0 0 / 8.5%);
+    --border-input: oklch(100% 0 0 / 18%);
+    --border-strong: oklch(78% 0.16 220 / 42%);
+
+    --text: oklch(98% 0.005 240);
+    --text-secondary: oklch(76% 0.02 240);
+    --text-muted: oklch(60% 0.015 240);
+
+    --accent: oklch(78% 0.16 220);
+    --accent-hover: oklch(86% 0.13 210);
+    --accent-subtle: oklch(78% 0.16 220 / 11%);
+
+    --shadow-card: 0 2px 10px oklch(0% 0 0 / 45%), 0 1px 2px oklch(0% 0 0 / 25%);
+    --shadow-card-hover: 0 12px 36px oklch(0% 0 0 / 70%), 0 2px 8px oklch(0% 0 0 / 35%);
+    --highlight-inset: inset 0 1px 0 0 oklch(100% 0 0 / 9%);
+  }
 }
 
 /* Windows High Contrast / Forced Colors Mode Support */
@@ -70,11 +132,16 @@
     --border-input: CanvasText;
     --border-strong: Highlight;
     --accent: LinkText;
+    --highlight-inset: none;
   }
-  .card, .metric-card, .process-card, .article-card, .contact-box, .inline-form-card, .direct-channels-card {
+  .card, .metric-card, .process-card, .article-card, .contact-box, .inline-form-card, .direct-channels-card, .btn {
     border: 1px solid CanvasText;
   }
 }
+
+/* ==========================================================================
+   Base Elements & Global Resets
+   ========================================================================== */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -85,7 +152,7 @@
 html {
   font-size: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 5.5rem;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -99,6 +166,7 @@ html {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
@@ -106,16 +174,21 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg);
-  background-image: radial-gradient(ellipse 80% 35% at 50% -8%, var(--accent-subtle), transparent);
+  background-image:
+    radial-gradient(ellipse 75% 35% at 50% -4%, var(--accent-subtle), transparent 70%),
+    radial-gradient(ellipse 50% 25% at 85% 12%, var(--accent-subtle), transparent 60%);
   background-repeat: no-repeat;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.65;
   text-align: start;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* Apply text-wrap: balance only to unboxed section/hero headings per typography guidance */
+/* Apply text-wrap: balance to key standalone headings */
 .hero h1,
 .page-hero h1,
 .section-title,
@@ -125,8 +198,10 @@ body {
   color: var(--text);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: var(--text);
+  font-weight: 750;
+  letter-spacing: -0.025em;
 }
 
 p, li, dd {
@@ -136,8 +211,8 @@ p, li, dd {
 a {
   color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 0.2em;
-  transition: color 0.15s ease;
+  text-underline-offset: 0.22em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 a:hover {
@@ -164,18 +239,20 @@ a:hover {
 .skip-link {
   position: absolute;
   top: -8rem;
-  left: 1rem;
+  left: 1.25rem;
   background: var(--accent);
   color: var(--btn-primary-text);
   font-weight: 700;
-  padding: 0.6rem 1rem;
+  padding: 0.65rem 1.15rem;
   border-radius: var(--radius);
   z-index: 1000;
   text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: top 0.2s ease;
 }
 
 .skip-link:focus {
-  top: 0.75rem;
+  top: 1rem;
 }
 
 .container {
@@ -184,36 +261,47 @@ a:hover {
   padding: 0 1.5rem;
 }
 
-/* Header & Navigation */
+/* ==========================================================================
+   Header & Two-Tier Architectural Masthead
+   ========================================================================== */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: color-mix(in oklab, var(--bg) 92%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bg) 84%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  .site-header {
+    padding-top: env(safe-area-inset-top, 0);
+  }
 }
 
 .nav-bar {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.25rem 0 0.75rem;
+  gap: 0.65rem;
+  padding: 1.35rem 0 0.85rem;
 }
 
+/* Tier 1: Identity & Executive Designation */
 .brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-decoration: none;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .brand-name {
   font-size: clamp(2rem, 1.4rem + 2.3vw, 2.75rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   color: var(--text);
   margin: 0;
   line-height: 1.12;
@@ -225,15 +313,16 @@ a:hover {
 }
 
 .brand-title {
-  font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
+  font-size: clamp(1rem, 0.92rem + 0.3vw, 1.18rem);
   color: var(--accent);
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   line-height: 1.35;
-  margin-top: 0.25rem;
-  margin-bottom: 0.35rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
+/* Tier 2: Navigation Links & Action Controls */
 .nav-right {
   display: flex;
   align-items: center;
@@ -241,7 +330,7 @@ a:hover {
   width: 100%;
   gap: 1rem;
   flex-wrap: wrap;
-  padding-top: 0.65rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--border);
 }
 
@@ -255,38 +344,41 @@ a:hover {
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.35rem 0.65rem;
-  border-radius: 0.375rem;
+  font-size: 0.9rem;
+  font-weight: 550;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .nav-links a:hover {
   color: var(--accent);
-  background: var(--bg-surface);
+  background: var(--bg-elevated);
 }
 
 .nav-links a[aria-current="page"],
 .nav-links a[aria-current="true"] {
   color: var(--accent);
   background: var(--accent-subtle);
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.5rem;
 }
 
-/* Buttons & Icons */
+/* ==========================================================================
+   Buttons, Micro-Badges & Vector Icons
+   ========================================================================== */
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  padding: 0.52rem 1rem;
+  padding: 0.55rem 1.05rem;
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: var(--radius);
@@ -295,67 +387,91 @@ a:hover {
   border: 1px solid var(--border);
   background: var(--bg-surface);
   color: var(--text);
-  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  min-height: 2.45rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.15s ease,
+              border-color 0.15s ease,
+              box-shadow 0.15s ease,
+              color 0.15s ease;
+  min-height: 2.5rem;
   font-family: inherit;
+  user-select: none;
 }
 
 .btn-sm {
-  padding: 0.38rem 0.78rem;
+  padding: 0.4rem 0.85rem;
   font-size: 0.8125rem;
-  min-height: 2.15rem;
+  min-height: 2.2rem;
 }
 
 .btn:hover {
   background: var(--bg-elevated);
   border-color: var(--border-strong);
   color: var(--text);
+  transform: translateY(-1px);
+  box-shadow: var(--highlight-inset), var(--shadow-card-hover);
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn-primary {
   background: var(--accent);
   color: var(--btn-primary-text);
   border-color: transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 3px 12px var(--accent-subtle);
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
   color: var(--btn-primary-text);
   border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--accent-subtle);
 }
 
 .icon {
   width: 0.95rem;
   height: 0.95rem;
   flex-shrink: 0;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
 .icon-btn {
   padding: 0;
-  width: 2.15rem;
-  height: 2.15rem;
-  min-height: 2.15rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  min-height: 2.2rem;
+  font-size: 1rem;
 }
 
-/* Hero & Credential Pills */
+/* ==========================================================================
+   Executive Hero & Production Metrics
+   ========================================================================== */
+
 .hero {
-  padding: 2.25rem 0 1.85rem;
+  padding: 2.75rem 0 2.25rem;
   border-bottom: 1px solid var(--border);
 }
 
 .status-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   font-family: var(--font-mono);
   font-size: 0.76rem;
-  font-weight: 500;
+  font-weight: 550;
   color: var(--text-secondary);
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  padding: 0.28rem 0.75rem;
-  border-radius: 999px;
-  margin-bottom: 0.85rem;
+  box-shadow: var(--highlight-inset);
+  padding: 0.32rem 0.85rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
 }
 
 .status-dot {
@@ -363,56 +479,56 @@ a:hover {
   height: 0.45rem;
   border-radius: 50%;
   background: var(--status-green);
-  box-shadow: 0 0 6px var(--status-green);
+  box-shadow: 0 0 8px var(--status-green-glow);
   flex-shrink: 0;
 }
 
 .hero h1 {
   font-size: clamp(2rem, 1.4rem + 2.3vw, 2.75rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   line-height: 1.12;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 
 .hero-subtitle {
   font-size: clamp(1.02rem, 0.95rem + 0.4vw, 1.2rem);
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
 .hero-lead {
   color: var(--text-secondary);
-  font-size: 1.02rem;
-  line-height: 1.62;
-  max-width: 72ch;
-  margin-bottom: 0.85rem;
+  font-size: clamp(1.04rem, 0.98rem + 0.22vw, 1.14rem);
+  line-height: 1.7;
+  max-width: 74ch;
+  margin-bottom: 1.15rem;
 }
 
 .hero-lead strong {
   color: var(--text);
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0.95rem 0 1.5rem;
+  gap: 0.65rem;
+  margin: 1.25rem 0 1.85rem;
 }
 
 .direct-channels-list .hero-actions {
   margin: 0.35rem 0 0;
 }
 
-/* Metrics Bar */
+/* Production Metrics Bar */
 .metrics-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.85rem;
-  padding-top: 1.25rem;
+  gap: 1rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border);
 }
 
@@ -420,38 +536,52 @@ a:hover {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 0.85rem 1rem;
-  box-shadow: var(--shadow-card);
+  padding: 1.05rem 1.15rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--highlight-inset), var(--shadow-card-hover);
 }
 
 .metric-card dt {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-family: var(--font-mono);
-  font-weight: 600;
+  font-weight: 650;
   color: var(--text-muted);
-  margin-bottom: 0.2rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
 }
 
 .metric-val {
-  font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
   font-weight: 800;
   color: var(--text);
   font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums lining-nums;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 .metric-note {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
-  line-height: 1.3;
-  margin-top: 0.2rem;
+  line-height: 1.35;
+  margin-top: 0.35rem;
 }
 
-/* Sections */
+/* ==========================================================================
+   Sections, Headers & Bento Grid Architecture
+   ========================================================================== */
+
 .section {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   border-bottom: 1px solid var(--border);
   container-type: inline-size;
 }
@@ -459,8 +589,8 @@ a:hover {
 .section-header {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 1.15rem;
+  gap: 0.3rem;
+  margin-bottom: 1.35rem;
 }
 
 .section-header-row {
@@ -468,8 +598,8 @@ a:hover {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1.15rem;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
 }
 
 .section-header-row .section-header {
@@ -477,30 +607,30 @@ a:hover {
 }
 
 .section-title {
-  font-size: 1.35rem;
+  font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.6rem);
   font-weight: 750;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   line-height: 1.25;
 }
 
 .section-subtitle {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  max-width: 68ch;
+  font-size: 0.98rem;
+  max-width: 70ch;
 }
 
-/* Bento Cards Grid: 2x2 default for 4 Flagship Systems, 3-col for Advisory & Notes */
+/* Bento Grids */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.15rem;
+  gap: 1.25rem;
 }
 
 .cards-grid-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-@container (max-width: 48rem) {
+@container (max-width: 52rem) {
   .cards-grid,
   .cards-grid-3 {
     grid-template-columns: 1fr;
@@ -517,21 +647,24 @@ a:hover {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.4rem;
-  box-shadow: var(--shadow-card);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  padding: 1.6rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
 .card:hover {
+  transform: translateY(-2px);
   border-color: var(--border-strong);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: var(--highlight-inset), var(--shadow-card-hover);
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 0.65rem;
+  gap: 0.75rem;
 }
 
 .card-top {
@@ -544,9 +677,10 @@ a:hover {
 
 .card-badge {
   font-family: var(--font-mono);
-  font-size: 0.73rem;
+  font-size: 0.74rem;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 650;
+  letter-spacing: 0.01em;
 }
 
 .card-meta {
@@ -558,64 +692,74 @@ a:hover {
 
 .card-link {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   text-decoration: none;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .card h3 {
-  font-size: 1.06rem;
+  font-size: 1.12rem;
   font-weight: 700;
   line-height: 1.32;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.62;
 }
 
 .card p strong {
   color: var(--text);
-  font-weight: 600;
+  font-weight: 650;
 }
 
+/* Micro-Badge Tag List */
 .tag-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.45rem;
   margin-top: auto;
-  padding-top: 0.55rem;
+  padding-top: 0.75rem;
 }
 
 .tag-list li {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 550;
+  letter-spacing: 0.01em;
   color: var(--text-secondary);
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  padding: 0.18rem 0.52rem;
-  border-radius: 0.3rem;
+  padding: 0.22rem 0.58rem;
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.card:hover .tag-list li {
+  border-color: color-mix(in oklab, var(--border) 70%, var(--accent));
 }
 
 .advisory-outcomes {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.42rem;
-  margin-top: 0.25rem;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
   margin-bottom: 0.5rem;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
 }
 
 .advisory-outcomes li {
   position: relative;
-  padding-left: 1.15rem;
-  line-height: 1.45;
+  padding-left: 1.25rem;
+  line-height: 1.48;
 }
 
 .advisory-outcomes li::before {
@@ -629,7 +773,7 @@ a:hover {
 
 .card-footer {
   margin-top: auto;
-  padding-top: 0.85rem;
+  padding-top: 0.95rem;
   border-top: 1px solid var(--border);
 }
 
@@ -637,15 +781,18 @@ a:hover {
   width: 100%;
 }
 
-/* Timeline Roles */
+/* ==========================================================================
+   Timeline, Roles & Credentials
+   ========================================================================== */
+
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 1.9rem;
+  gap: 2.25rem;
 }
 
 .role {
-  padding-bottom: 1.9rem;
+  padding-bottom: 2.25rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -659,20 +806,20 @@ a:hover {
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.65rem;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
 }
 
 .role-title {
   display: inline;
-  font-size: 1.06rem;
-  font-weight: 700;
+  font-size: 1.12rem;
+  font-weight: 750;
 }
 
 .role-company {
-  font-size: 0.98rem;
+  font-size: 1.02rem;
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 650;
   margin-left: 0.35rem;
 }
 
@@ -683,20 +830,22 @@ a:hover {
 
 .role-date {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
 }
 
 .role-bullets {
-  padding-left: 1.15rem;
+  padding-left: 1.25rem;
   color: var(--text-secondary);
-  font-size: 0.92rem;
-  max-width: 78ch;
+  font-size: 0.94rem;
+  max-width: 80ch;
+  line-height: 1.65;
 }
 
 .role-bullets li {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
 }
 
 .role-bullets li:last-child {
@@ -705,26 +854,26 @@ a:hover {
 
 .role-bullets strong {
   color: var(--text);
-  font-weight: 600;
+  font-weight: 650;
 }
 
 /* Credentials & Technical Stack */
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  gap: 2.5rem;
+  gap: 2.75rem;
 }
 
 .cred-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.15rem;
+  margin-top: 1.15rem;
 }
 
 .cred-list li {
-  padding-bottom: 1rem;
+  padding-bottom: 1.15rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -738,60 +887,65 @@ a:hover {
   justify-content: space-between;
   align-items: baseline;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
 .cred-head strong {
   color: var(--text);
-  font-weight: 700;
+  font-weight: 750;
 }
 
 .cred-head span {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
 }
 
 .cred-sub {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  margin-top: 0.15rem;
+  margin-top: 0.2rem;
 }
 
 .cred-meta {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
 }
 
 .cred-head .badge-active {
   color: var(--status-green);
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .stack-dl {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-  margin-top: 1rem;
+  gap: 1rem;
+  margin-top: 1.15rem;
 }
 
 .stack-dl dt {
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 750;
   color: var(--accent);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .stack-dl dd {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-/* Contact Box */
+/* ==========================================================================
+   Contact Elements, Native Dialog Modal & Accessible Form Controls
+   ========================================================================== */
+
 .contact-section {
   border-bottom: none;
 }
@@ -800,17 +954,18 @@ a:hover {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.85rem;
-  box-shadow: var(--shadow-card);
+  padding: 2.15rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.35rem;
 }
 
 .contact-copy {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  max-width: 68ch;
+  font-size: 0.98rem;
+  max-width: 70ch;
+  line-height: 1.65;
   margin-top: 0.35rem;
 }
 
@@ -818,32 +973,33 @@ a:hover {
   font-style: normal;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
-/* Native Modal Dialog & Accessible Form Controls */
+/* Native Modal Dialog */
 dialog:modal {
   overscroll-behavior: contain;
   margin: auto;
-  width: min(92vw, 36rem);
+  width: min(92dvw, 38rem);
   max-height: 90dvh;
   background: var(--bg);
   color: var(--text);
   border: 1px solid var(--border-strong);
-  border-radius: 0.75rem;
+  border-radius: var(--radius);
   padding: 0;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--highlight-inset), 0 24px 60px rgba(0, 0, 0, 0.4);
 }
 
 dialog::backdrop {
   overflow: hidden;
   overscroll-behavior: contain;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(4px);
+  background: rgba(10, 15, 26, 0.68);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .dialog-inner {
-  padding: 1.5rem;
+  padding: 1.75rem;
 }
 
 .dialog-header {
@@ -851,82 +1007,83 @@ dialog::backdrop {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
 }
 
 .dialog-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 750;
   margin-top: 0.15rem;
 }
 
 .dialog-subtitle {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
 }
 
 .form-fieldset {
   border: none;
-  margin-block-end: 1.15rem;
+  margin-block-end: 1.25rem;
 }
 
 .form-legend {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 650;
   color: var(--text);
-  margin-block-end: 0.45rem;
+  margin-block-end: 0.5rem;
 }
 
 .radio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .radio-card {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 0.75rem;
+  gap: 0.55rem;
+  padding: 0.6rem 0.85rem;
   background: var(--bg-surface);
   border: 1px solid var(--border-input);
-  border-radius: var(--radius);
-  font-size: 0.84rem;
-  font-weight: 500;
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  font-weight: 550;
   color: var(--text);
   cursor: pointer;
-  min-height: 2.75rem;
+  min-height: 2.85rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .radio-card:has(input:checked) {
   border-color: var(--accent);
   background: var(--accent-subtle);
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.85rem;
+  gap: 0.95rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-block-end: 1rem;
+  margin-block-end: 1.15rem;
 }
 
 .form-label {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.88rem;
+  font-weight: 650;
   color: var(--text);
-  margin-block-end: 0.3rem;
+  margin-block-end: 0.35rem;
 }
 
 .req-tag {
   font-weight: 400;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
 }
 
@@ -935,22 +1092,15 @@ dialog::backdrop {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.5;
-  padding: 0.65rem 0.75rem;
+  padding: 0.7rem 0.85rem;
   min-height: 3rem;
-  background-color: #ffffff;
-  color: #0f172a;
+  background-color: var(--bg-surface);
+  color: var(--text);
   border: 1px solid var(--border-input);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   width: 100%;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-
-[data-theme="dark"] .form-input,
-[data-theme="dark"] .form-textarea {
-  background-color: #0b111e;
-  color: #f8fafc;
-  border-color: rgba(148, 163, 184, 0.35);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .form-input:focus,
@@ -958,13 +1108,6 @@ dialog::backdrop {
   border-color: var(--accent);
   outline: none;
   box-shadow: 0 0 0 3px var(--accent-subtle);
-}
-
-@media (pointer: coarse) {
-  .form-input,
-  .radio-card {
-    min-height: 3.25rem;
-  }
 }
 
 .form-textarea {
@@ -980,15 +1123,15 @@ dialog::backdrop {
 }
 
 .form-hint {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   margin-block-end: 0.45rem;
   line-height: 1.4;
 }
 
 .form-error {
-  font-size: 0.84rem;
-  font-weight: 600;
+  font-size: 0.86rem;
+  font-weight: 650;
   color: var(--error-red);
   min-height: 1.25rem;
   margin-block-end: 0.5rem;
@@ -998,33 +1141,36 @@ dialog::backdrop {
   display: flex;
   justify-content: flex-end;
   gap: 0.65rem;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--border);
 }
 
-/* Subpage Hero, Process Cards, Notes TOC & Contact Grid */
+/* ==========================================================================
+   Subpages: Experience, Consulting, Blog & Direct Contact Page
+   ========================================================================== */
+
 .page-hero {
-  padding: 2.25rem 0 1.75rem;
+  padding: 2.75rem 0 2rem;
   border-bottom: 1px solid var(--border);
 }
 
 .page-hero.contact-hero {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .page-hero h1 {
-  font-size: clamp(1.85rem, 1.4rem + 1.8vw, 2.4rem);
+  font-size: clamp(1.9rem, 1.4rem + 1.8vw, 2.45rem);
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
   line-height: 1.15;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.55rem;
 }
 
 .page-hero-lead {
-  font-size: 1.02rem;
+  font-size: clamp(1.02rem, 0.96rem + 0.2vw, 1.12rem);
   color: var(--text-secondary);
-  max-width: 70ch;
-  line-height: 1.6;
+  max-width: 72ch;
+  line-height: 1.65;
 }
 
 /* Contact Page Top Social & Document Link Bar */
@@ -1033,7 +1179,7 @@ dialog::backdrop {
   flex-wrap: wrap;
   gap: 0.55rem;
   margin-top: 0;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-form-center {
@@ -1043,61 +1189,72 @@ dialog::backdrop {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
-  gap: 1.15rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
 }
 
 .process-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.4rem;
-  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.65rem;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--highlight-inset), var(--shadow-card-hover);
 }
 
 .process-step-num {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.76rem;
+  font-weight: 750;
   color: var(--accent);
 }
 
 .process-card h3 {
-  font-size: 1.04rem;
+  font-size: 1.08rem;
   font-weight: 700;
 }
 
 .process-card p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .notes-toc {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.25rem 1.4rem;
-  margin-top: 1.75rem;
-  box-shadow: var(--shadow-card);
+  padding: 1.35rem 1.5rem;
+  margin-top: 2rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
 }
 
 .notes-toc-title {
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 750;
   color: var(--text-muted);
-  margin-bottom: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
 }
 
 .notes-toc-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
+  gap: 0.5rem;
 }
 
 .notes-toc-list a {
@@ -1105,12 +1262,12 @@ dialog::backdrop {
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
-  font-size: 0.92rem;
+  font-size: 0.94rem;
   font-weight: 600;
   text-decoration: none;
   color: var(--text);
-  padding: 0.4rem 0.55rem;
-  border-radius: 0.35rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: var(--radius-sm);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
@@ -1121,7 +1278,7 @@ dialog::backdrop {
 
 .notes-toc-tag {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   color: var(--accent);
   flex-shrink: 0;
 }
@@ -1130,59 +1287,61 @@ dialog::backdrop {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
 }
 
 .article-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: var(--shadow-card);
-  scroll-margin-top: 5.5rem;
+  padding: 2.25rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
+  scroll-margin-top: 6rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .article-card:target {
   border-color: var(--border-strong);
+  box-shadow: 0 0 0 3px var(--accent-subtle), var(--shadow-card-hover);
 }
 
 .article-header {
-  padding-bottom: 1rem;
-  margin-bottom: 1.15rem;
+  padding-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
   border-bottom: 1px solid var(--border);
 }
 
 .article-title {
-  font-size: 1.28rem;
+  font-size: clamp(1.25rem, 1.1rem + 0.5vw, 1.45rem);
   font-weight: 750;
   line-height: 1.3;
-  margin-top: 0.35rem;
+  margin-top: 0.45rem;
 }
 
 .article-body {
   display: flex;
   flex-direction: column;
-  gap: 0.95rem;
+  gap: 1.05rem;
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 74ch;
+  font-size: 0.96rem;
+  line-height: 1.72;
+  max-width: 76ch;
 }
 
 .article-body strong {
   color: var(--text);
-  font-weight: 600;
+  font-weight: 650;
 }
 
 .article-footer {
-  margin-top: 1.35rem;
-  padding-top: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.15rem;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .article-footer .tag-list {
@@ -1193,7 +1352,7 @@ dialog::backdrop {
 .contact-page-grid {
   display: grid;
   grid-template-columns: 1.35fr 0.9fr;
-  gap: 2rem;
+  gap: 2.25rem;
   align-items: start;
 }
 
@@ -1202,20 +1361,20 @@ dialog::backdrop {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  box-shadow: var(--highlight-inset), var(--shadow-card);
 }
 
 .direct-channels-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  margin-top: 1.1rem;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .direct-channels-list li {
-  padding-bottom: 1.1rem;
+  padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -1226,19 +1385,30 @@ dialog::backdrop {
 
 .channel-label {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  font-weight: 700;
+  font-size: 0.76rem;
+  font-weight: 750;
   color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   display: block;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer & Toast Notification
+   ========================================================================== */
+
 .site-footer {
-  padding: 1.85rem 0 2.5rem;
+  padding: 2.25rem 0 3rem;
   border-top: 1px solid var(--border);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .site-footer {
+    padding-bottom: max(3rem, calc(2rem + env(safe-area-inset-bottom, 0)));
+  }
 }
 
 .footer-inner {
@@ -1246,16 +1416,16 @@ dialog::backdrop {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.15rem;
   list-style: none;
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
 }
 
 .footer-links a {
@@ -1269,14 +1439,15 @@ dialog::backdrop {
 
 .toast {
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   background: var(--status-green);
   color: #ffffff;
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0.6rem 1rem;
+  font-weight: 650;
+  font-size: 0.875rem;
+  padding: 0.7rem 1.15rem;
   border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   opacity: 0;
   transform: translateY(1rem);
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -1289,62 +1460,142 @@ dialog::backdrop {
   transform: translateY(0);
 }
 
-/* Responsive Mobile Navigation & Grids */
+/* ==========================================================================
+   Touch Device Adaptations & Accessibility (Pointer: Coarse)
+   ========================================================================== */
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-links a,
+  .form-input,
+  .radio-card,
+  .icon-btn {
+    min-height: 2.75rem; /* 44px WCAG touch hit target */
+  }
+
+  .nav-links a {
+    padding: 0.55rem 0.85rem;
+  }
+
+  .btn-sm {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.95rem;
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (< 768px / 48rem and < 512px / 32rem)
+   ========================================================================== */
+
 @media (max-width: 48rem) {
   html {
-    scroll-padding-top: 6.75rem;
+    scroll-padding-top: 7rem;
   }
+
   .nav-bar {
-    padding-top: 0.6rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.65rem;
   }
+
   .nav-right {
     width: 100%;
     justify-content: space-between;
     border-top: 1px solid var(--border);
-    padding-top: 0.45rem;
-    gap: 0.5rem;
+    padding-top: 0.55rem;
+    gap: 0.65rem;
   }
+
   .nav-links {
     overflow-x: auto;
     white-space: nowrap;
     gap: 0.35rem;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.2rem;
   }
+
   .nav-links::-webkit-scrollbar {
     display: none;
   }
+
   .metrics-bar {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .radio-grid,
   .form-row,
   .contact-page-grid {
     grid-template-columns: 1fr;
   }
+
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
+
+@media (max-width: 32rem) {
+  .metrics-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .nav-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-controls .btn {
+    flex: 1;
+  }
+
+  .nav-controls .icon-btn {
+    flex: 0 0 2.2rem;
+  }
+
+  .card, .article-card, .inline-form-card, .direct-channels-card {
+    padding: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Print Stylesheet
+   ========================================================================== */
 
 @media print {
   .site-header, .hero-actions, .status-pill, .site-footer, .skip-link, .toast, .no-print, dialog {
     display: none !important;
   }
+
   body {
-    background: #fff !important;
-    color: #000 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
     font-size: 10pt;
+    line-height: 1.45;
   }
+
   .container {
     max-width: 100%;
     padding: 0;
   }
+
   .section, .hero, .role, .card, .contact-box, .article-card {
-    border-color: #ccc !important;
+    border-color: #d1d5db !important;
     background: transparent !important;
     box-shadow: none !important;
     padding: 0.5rem 0 !important;
   }
+
   a {
-    color: #000 !important;
+    color: #000000 !important;
     text-decoration: none !important;
   }
 }
